@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>M.A Outdoor Rent</title>
+</head>
+<body class="bg-[#f4f1ea] text-gray-800">
+
+<header class="flex items-center justify-between gap-4 px-6 md:px-10 py-4 bg-[#f4f1ea]/95 backdrop-blur sticky top-0 z-50 border-b border-green-900/10">
+    <div class="flex items-center gap-2 font-extrabold text-green-900 text-lg">
+        <i class="fa-solid fa-mountain-sun text-2xl"></i>
+        M.A OUTDOOR
+    </div>
+
+    <ul id="navMenu" class="hidden md:flex flex-wrap items-center gap-6 text-sm">
+        <li><a href="#" class="text-green-700 font-semibold border-b-2 border-green-800 pb-1">Home</a></li>
+        <li><a href="#tentang" class="text-green-700 font-semibold hover:text-green-700">Tentang Kami</a></li>
+        <li><a href="#" class="text-green-700 font-semibold hover:text-green-500">Paket</a></li>
+        <li><a href="#fasilitas" class="text-green-700 font-semibold hover:text-green-500">Produk</a></li>
+        <li><a href="#" class="text-green-700 font-semibold hover:text-green-500">Galeri</a></li>
+        <li><a href="#" class="text-green-700 font-semibold hover:text-green-500">Testimoni</a></li>
+        <li><a href="#kontak" class="text-green-700 font-semibold hover:text-green-500">Kontak</a></li>
+    </ul>
+
+    <button class="hidden sm:flex bg-green-700 text-white items-center gap-2 text-sm px-4 py-2.5 rounded-xl hover:bg-green-800 transition">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Chat Sekarang</span>
+    </button>
+
+    <button id="menuBtn" class="md:hidden text-green-900 text-xl">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="hidden md:hidden flex-col gap-4 px-6 py-4 bg-[#f4f1ea] border-b border-green-900/10 text-sm">
+    <a href="/index.html" class="text-green-900 font-semibold">Home</a>
+    <a href="" class="text-green-900/80 font-semibold">Tentang Kami</a>
+    <a href="#" class="text-green-900/80 font-semibold">Paket</a>
+    <a href="" class="text-green-900/80 font-semibold">Produk</a>
+    <a href="#" class="text-green-900/80 font-semibold">Galeri</a>
+    <a href="#" class="text-green-900/80 font-semibold">Testimoni</a>
+    <a href="#kontak" class="text-green-900/80 font-semibold">Kontak</a>
+</div>
+
+<!-- HERO / TENTANG KAMI -->
+<section id="tentang" class="relative w-full min-h-[520px] md:min-h-[600px] flex items-end
+            bg-gradient-to-br from-green-950 via-green-800 to-gray-700 bg-cover bg-center">
+    <!-- Ganti bagian class bg-gradient... di atas dengan style="background-image:url('foto-gunung.jpg')" kalau foto sudah ada -->
+    <div class="absolute inset-0 bg-black/35"></div>
+
+    <div class="relative z-10 w-full px-6 md:px-16 py-10 md:py-16 text-white max-w-3xl">
+        <p class="text-xs md:text-sm font-semibold tracking-wide mb-3 text-green-200">Tentang Kami</p>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-2">M.A OUTDOOR RENT</h1>
+        <h2 class="text-xl md:text-3xl font-bold mb-4">Teman Setiap Langkah Petualanganmu</h2>
+        <p class="text-sm md:text-base leading-relaxed text-gray-100 max-w-xl">
+            Kami hadir untuk mendukung setiap perjalanan, baik itu yang kecil maupun yang besar,
+            dengan perlengkapan outdoor berkualitas dan pelayanan terbaik.
+        </p>
+    </div>
+
+    <svg class="absolute bottom-0 left-0 w-full h-14 md:h-20 text-[#f4f1ea]" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="currentColor" d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z"></path>
+    </svg>
+</section>
+
+<!-- SEJARAH KAMI -->
+<section class="px-6 md:px-16 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+            <div class="flex items-center gap-2 text-green-800 font-semibold text-sm mb-3">
+                <i class="fa-solid fa-mountain"></i>
+                <span>Sejarah Kami</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-green-950 mb-4 leading-snug">
+                Dari Hobi, Menjadi Solusi Petualangan
+            </h3>
+            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+                M.A Outdoor Rent berdiri pada tahun 2023, berawal dari kecintaan kami terhadap alam
+                dan hobi berpetualang. Kami sering melihat banyak teman, terutama pelajar dan
+                mahasiswa, yang ingin menjelajahi alam namun terkendala dengan mahalnya harga
+                peralatan dan sulitnya mendapatkan alat yang berkualitas untuk disewa.
+            </p>
+            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                Dari pengalaman tersebut, kami memutuskan untuk mendirikan M.A Outdoor Rent
+                sebagai solusi bagi siapa saja yang ingin menikmati keindahan alam tanpa harus
+                memiliki peralatan sendiri. Dimulai dari peralatan sederhana, kini kami telah
+                berkembang dengan berbagai pilihan perlengkapan outdoor yang lengkap dan berkualitas.
+            </p>
+            <p class="font-serif italic text-green-800 text-lg leading-snug">
+                Terus berkembang, untuk lebih banyak cerita di alam.
+            </p>
+        </div>
+
+        <!-- Gambar & Timeline -->
+        <div class="grid grid-cols-3 gap-3">
+            <div class="col-span-3 aspect-video rounded-2xl bg-gray-300 flex items-center justify-center text-gray-500 text-sm">
+                Foto Camping (utama)
+            </div>
+            <div class="aspect-square rounded-2xl bg-gray-300 flex items-center justify-center text-gray-500 text-xs">
+                Foto Carrier
+            </div>
+            <div class="col-span-2 aspect-square sm:aspect-[2/1] rounded-2xl bg-gray-300 flex items-center justify-center text-gray-500 text-xs">
+                Foto Pemandangan
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="grid md:grid-cols-[1fr,1fr] gap-10 mt-14">
+        <div></div>
+        <ol class="relative border-l-2 border-green-800/30 pl-6 space-y-8">
+            <li class="relative">
+                <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-green-800"></span>
+                <h4 class="font-bold text-green-950">2023</h4>
+                <p class="text-sm text-gray-600">M.A Outdoor Rent resmi berdiri dengan peralatan awal yang sederhana.</p>
+            </li>
+            <li class="relative">
+                <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-green-800"></span>
+                <h4 class="font-bold text-green-950">2024</h4>
+                <p class="text-sm text-gray-600">Mulai menambah variasi peralatan dan memperluas jangkauan pelanggan.</p>
+            </li>
+            <li class="relative">
+                <span class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-green-800"></span>
+                <h4 class="font-bold text-green-950">2025 - Sekarang</h4>
+                <p class="text-sm text-gray-600">Terus berinovasi, menambah paket One Day Trip & Open Trip, serta meningkatkan kualitas layanan.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- FASILITAS KAMI -->
+<section id="fasilitas" class="px-6 md:px-16 py-16 md:py-24 bg-[#eae7de]">
+    <div class="grid md:grid-cols-2 gap-10 items-start mb-10">
+        <div>
+            <div class="flex items-center gap-2 text-green-800 font-semibold text-sm mb-3">
+                <i class="fa-solid fa-campground"></i>
+                <span>Fasilitas Kami</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-green-950 mb-4 leading-snug">
+                Perlengkapan Lengkap, Siap untuk Petualanganmu
+            </h3>
+            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                Kami menyediakan berbagai fasilitas dan perlengkapan outdoor yang lengkap, modern,
+                dan selalu dalam kondisi terbaik. Setiap peralatan kami rutin dicek dan dibersihkan
+                agar aman dan nyaman digunakan.
+            </p>
+            <button class="bg-green-900 text-white text-sm font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2 hover:bg-green-800 transition">
+                Lihat Semua Produk
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-campground text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Tenda Camping</h4>
+            <p class="text-sm text-gray-600">Berbagai ukuran kapasitas (2P, 4P, 6P, dll).</p>
+        </div>
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-suitcase-rolling text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Carrier</h4>
+            <p class="text-sm text-gray-600">Carrier dengan kapasitas 30L - 70L.</p>
+        </div>
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-bed text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Sleeping Bag</h4>
+            <p class="text-sm text-gray-600">Nyaman, hangat, dan bersih.</p>
+        </div>
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-fire-burner text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Kompor Portable</h4>
+            <p class="text-sm text-gray-600">Praktis dan mudah digunakan.</p>
+        </div>
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-utensils text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Peralatan Masak</h4>
+            <p class="text-sm text-gray-600">Lengkap untuk kebutuhan memasak di alam.</p>
+        </div>
+        <div class="bg-[#f4f1ea] rounded-2xl p-6">
+            <i class="fa-solid fa-screwdriver-wrench text-green-800 text-2xl mb-3"></i>
+            <h4 class="font-bold text-green-950 mb-1">Perlengkapan Lainnya</h4>
+            <p class="text-sm text-gray-600">Trekking Pole, Headlamp, Tenda Dome, dll.</p>
+        </div>
+    </div>
+</section>
+
+<!-- KENAPA MEMILIH -->
+<section class="px-6 md:px-16 py-16 md:py-20 bg-green-950 text-white">
+    <div class="flex items-center gap-2 text-green-200 font-semibold text-sm mb-3">
+        <i class="fa-solid fa-users"></i>
+        <span>Kenapa Memilih</span>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <h3 class="text-2xl md:text-3xl font-extrabold leading-snug max-w-md">
+            M.A Outdoor Rent?
+        </h3>
+        <p class="italic font-serif text-green-200 max-w-sm text-lg leading-snug">
+            "Karena kualitas, kenyamanan, dan kepuasan pelanggan adalah prioritas kami."
+        </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+        <div class="flex flex-col items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-green-800/60 flex items-center justify-center">
+                <i class="fa-solid fa-shield-halved text-lg"></i>
+            </div>
+            <h4 class="font-bold text-sm">Bersih & Terawat</h4>
+            <p class="text-xs text-green-200/80">Semua peralatan dibersihkan dan dicek secara berkala.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-green-800/60 flex items-center justify-center">
+                <i class="fa-solid fa-medal text-lg"></i>
+            </div>
+            <h4 class="font-bold text-sm">Kualitas Terjamin</h4>
+            <p class="text-xs text-green-200/80">Peralatan pilihan dengan standar terbaik.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-green-800/60 flex items-center justify-center">
+                <i class="fa-solid fa-tag text-lg"></i>
+            </div>
+            <h4 class="font-bold text-sm">Harga Bersahabat</h4>
+            <p class="text-xs text-green-200/80">Terjangkau untuk pelajar, mahasiswa, dan semua kalangan.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-green-800/60 flex items-center justify-center">
+                <i class="fa-solid fa-people-group text-lg"></i>
+            </div>
+            <h4 class="font-bold text-sm">Pelayanan Ramah</h4>
+            <p class="text-xs text-green-200/80">Tim kami siap membantu dengan cepat dan responsif.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+            <div class="w-14 h-14 rounded-full bg-green-800/60 flex items-center justify-center">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+            <h4 class="font-bold text-sm">Lokasi Strategis</h4>
+            <p class="text-xs text-green-200/80">Mudah diakses dari berbagai wilayah Parung Panjang dan sekitar.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontak" class="px-6 md:px-16 py-12 bg-green-950 text-white border-t border-white/10">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+            <div class="flex items-center gap-2 font-extrabold mb-2">
+                <i class="fa-solid fa-mountain-sun text-2xl"></i>
+                M.A OUTDOOR RENT
+            </div>
+            <p class="text-sm text-green-200/80">Rental alat outdoor untuk menemani setiap petualanganmu.</p>
+        </div>
+
+        <div>
+            <h5 class="font-bold mb-3">Kontak Kami</h5>
+            <ul class="space-y-2 text-sm text-green-200/80">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-phone"></i> +62 812-3456-7890</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-envelope"></i> ma.outdoorent</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Parung Panjang, Bogor</li>
+            </ul>
+        </div>
+
+        <div>
+            <h5 class="font-bold mb-3">Ikuti Kami</h5>
+            <div class="flex gap-4 text-lg">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+
+        <div class="flex items-end justify-start md:justify-end">
+            <p class="font-serif italic text-green-200">Good People, Great Adventure</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 border-t border-white/10 text-xs text-green-200/70">
+        <p>&copy; 2025 M.A Outdoor Rent. All rights reserved.</p>
+        <div class="flex gap-4">
+            <a href="#">Syarat & Ketentuan</a>
+            <a href="#">Kebijakan Privasi</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+</script>
+</body>
+</html>
