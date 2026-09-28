@@ -19,10 +19,14 @@
   </head>
 
   <body class="m-0 bg-[#f5f6ef] p-0 text-green-950">
+    <!-- ================================================= -->
+    <!-- NAVBAR -->
+    <!-- ================================================= -->
 
     <header
       class="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between border-b border-black/10 bg-amber-50/95 px-4 backdrop-blur-md md:px-20"
     >
+      <!-- LOGO -->
       <a href="../../index.html" class="shrink-0">
         <img
           src="../../assets/img/SEWAALATOUTDOORBERKUALITAS.png"
@@ -31,18 +35,21 @@
         />
       </a>
 
+      <!-- NAVIGATION -->
       <nav>
+        <!-- MOBILE BUTTON -->
         <button id="menuToggle" type="button" class="mr-4 md:hidden">
           <i id="menuIcon" class="fa-solid fa-bars text-xl text-green-800"> </i>
         </button>
 
+        <!-- MENU -->
         <ul
           id="navMenu"
           class="fixed right-0 top-0 z-40 flex h-screen w-64 translate-x-full flex-col items-center gap-6 pt-24 text-sm shadow-lg transition-transform duration-300 bg-amber-50 px-6 md:static md:h-auto md:w-auto md:translate-x-0 md:flex-row md:bg-transparent md:px-0 md:pt-0 md:shadow-none"
         >
           <li class="flex h-10 items-center">
             <a
-              href="/index.html"
+              href="../../index.html"
               class="font-semibold text-green-800 transition hover:text-green-500"
             >
               Home
@@ -104,7 +111,8 @@
           </li>
         </ul>
       </nav>
-      <!--wa-->
+
+      <!-- WHATSAPP -->
       <a
         href="https://wa.me/6281234567890"
         target="_blank"
@@ -116,9 +124,15 @@
       </a>
     </header>
 
+    <!-- ================================================= -->
+    <!-- HERO TENTANG KAMI -->
+    <!-- (foto sama persis dengan hero index.html: gambargunung.jpeg) -->
+    <!-- ================================================= -->
+
     <section
       class="relative flex min-h-[500px] items-center overflow-hidden pt-16"
     >
+      <!-- BACKGROUND FOTO -->
       <div
         class="absolute inset-0 bg-cover bg-center"
         style="
@@ -126,16 +140,18 @@
         "
       ></div>
 
-      <!-- Gradient -->
+      <!-- GRADIENT OVERLAY: gelap di kiri, transparan di kanan -->
       <div
         class="absolute inset-0 bg-gradient-to-r from-green-950/95 via-green-950/60 to-transparent"
       ></div>
 
+      <!-- CONTENT -->
       <div class="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 md:px-20">
         <div class="max-w-xl text-white">
           <p
             class="mb-4 text-sm font-medium uppercase tracking-[3px] text-amber-100"
           >
+            Tentang Kami
           </p>
 
           <h1 class="mb-3 text-4xl font-bold leading-tight md:text-6xl">
@@ -160,6 +176,7 @@
         </div>
       </div>
 
+      <!-- GARIS LENGKUNG TRANSISI KE SECTION BAWAH -->
       <div class="absolute bottom-0 left-0 z-10 w-full leading-[0]">
         <svg
           viewBox="0 0 1440 80"
@@ -176,6 +193,9 @@
       </div>
     </section>
 
+    <!-- ================================================= -->
+    <!-- SEJARAH KAMI -->
+    <!-- ================================================= -->
 
     <section class="bg-[#f5f6ef] px-6 py-16 md:px-20 md:py-20">
       <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_1fr_280px]">
@@ -284,6 +304,7 @@
               </p>
             </div>
 
+            <!-- 2025 -->
             <div class="relative">
               <span
                 class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-green-900"
@@ -301,7 +322,11 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- ================================================= -->
+    <!-- FASILITAS -->
+    <!-- ================================================= -->
+
     <section class="bg-[#f5f6ef] px-6 py-16 md:px-20 md:py-20">
       <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[320px_1fr]">
         <!-- TITLE -->
@@ -339,6 +364,7 @@
           </a>
         </div>
 
+        <!-- FACILITY CARDS -->
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <!-- CARD -->
           <div class="rounded-xl bg-white/70 p-6">
@@ -400,6 +426,208 @@
 
             <p class="mt-2 text-sm leading-6 text-gray-600">
               Trekking Pole, Headlamp, Tenda Dome, dll.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- KERJASAMA / MITRA TENWAS -->
+    <!-- ================================================= -->
+
+    <section class="bg-[#f5f6ef] px-6 py-16 md:px-20 md:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid items-center gap-10 lg:grid-cols-[1fr_320px]">
+          <!-- TEXT -->
+          <div>
+            <div class="mb-3 flex items-center gap-3">
+              <i class="fa-solid fa-handshake text-2xl text-green-900"> </i>
+
+              <span
+                class="text-sm font-medium uppercase tracking-wide text-green-900"
+              >
+                Kerjasama Kami
+              </span>
+            </div>
+
+            <h2
+              class="mb-5 text-3xl font-bold leading-tight text-green-950 md:text-4xl"
+            >
+              Mitra Resmi
+              <br />
+              Tenwas
+            </h2>
+
+            <p class="mb-4 text-sm leading-7 text-gray-700">
+              M.A Outdoor Rent bergabung sebagai mitra Tenwas, jaringan mitra
+              rental dan laundry peralatan camping.
+            </p>
+
+            <p class="mb-7 text-sm leading-7 text-gray-700">
+              Berikut daftar mitra Tenwas yang tergabung bersama kami.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="https://www.instagram.com/tenwas_official"
+                target="_blank"
+                class="inline-flex items-center gap-3 rounded-full bg-green-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-800"
+              >
+                <i class="fa-brands fa-instagram"></i>
+
+                tenwas_official
+              </a>
+
+              <a
+                href="../../assets/img/mitra-tenwas-daftar.jpeg"
+                target="_blank"
+                class="inline-flex items-center gap-3 rounded-full border border-green-900 px-6 py-3 text-sm font-semibold text-green-900 transition hover:bg-green-900 hover:text-white"
+              >
+                Lihat Poster Mitra
+
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- POSTER -->
+          <div
+            class="mx-auto w-full max-w-xs overflow-hidden rounded-2xl shadow-xl shadow-black/20"
+          >
+            <img
+              src="../../assets/img/mitra-tenwas.jpeg"
+              alt="Mitra Tenwas - Mitra Rental & Laundry Peralatan Camping"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- DAFTAR MITRA -->
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- M.A OUTDOOR RENT (KAMI) -->
+          <div class="rounded-xl bg-green-900 p-5 text-white">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-bold">M.A Outdoor Rent</h3>
+
+              <span
+                class="rounded-full bg-amber-50 px-3 py-0.5 text-xs font-semibold text-green-900"
+              >
+                Kami
+              </span>
+            </div>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-white/80">
+              <i class="fa-solid fa-location-dot mt-1.5"></i>
+              <span
+                >Kp Salimah, RT.08/RW.02, Gintung Cilejet, Kec. Parung Panjang,
+                Kabupaten Bogor, Jawa Barat 16360</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Awan Adventure</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jl. Danau Toba No.A1, Lingkungan Panji, Tegalgede, Kec.
+                Sumbersari, Kabupaten Jember, Jawa Timur 68124</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Abxy Outdoor</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jln. Warung Peuteuy, Kp Cileungsing, RT.002/RW.007, Pasawahan,
+                Kec. Tarogong Kaler, Kabupaten Garut, Jawa Barat 44151</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Sergai Camp</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jl. Coklat II No.344, komplek sawit indah, Kec. Perbaungan,
+                Kabupaten Serdang Bedagai, Sumatera Utara 20986</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Buser Outdoor</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jl. Kapuk 1 Kel No.212, RT.005/RW.018, Pengasinan, Kec.
+                Rawalumbu, Kota Bks, Jawa Barat 17115</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Blue Adventure</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Panjangsari Baru, RT.04/RW.10, Parakan Wetan, Kabupaten
+                Temanggung, Jawa Tengah 56254</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Ahda Camp</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Kp.pintu air No.RT 002/005, Waluya, Kec. Cikarang Utara,
+                Kabupaten Bekasi, Jawa Barat 17530</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Zaclean Outdoor</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jl. Petemon Sidomulyo IV No.47a, RT.009/RW.18, Petemon, Kec.
+                Sawahan, Surabaya, Jawa Timur 60252</span
+              >
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Jjds_Outdoor</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span>btp blok ac kesatuan 17 no 143</span>
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-white/70 p-5">
+            <h3 class="font-bold text-green-950">Ceper Outdoor</h3>
+
+            <p class="mt-2 flex gap-2 text-sm leading-6 text-gray-600">
+              <i class="fa-solid fa-location-dot mt-1.5 text-green-900"></i>
+              <span
+                >Jl. Keadilan Rt 01 Rw 02 Kec. Batu Ceper Kel. Batu Ceper, Kota
+                Tangerang</span
+              >
             </p>
           </div>
         </div>
