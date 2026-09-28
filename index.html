@@ -11,12 +11,7 @@
     <title>Home-Page</title>
 </head>
 
-<body class="m-0 bg-[#f5f6ef] p-0 text-green-950">
-
-    <!-- ================================================= -->
-    <!-- NAVBAR (disamakan persis dengan tentang_kami.html) -->
-    <!-- ================================================= -->
-
+<body>
     <header
         class="fixed left-0 top-0 z-50 flex h-16 w-full items-center
         justify-between border-b border-black/10 bg-amber-50/95 px-4
@@ -148,12 +143,6 @@
 
     </header>
 
-
-
-    <!-- ================================================= -->
-    <!-- HERO -->
-    <!-- ================================================= -->
-
     <section class="relative h-screen w-full">
 
         <div
@@ -207,22 +196,22 @@
             </div>
 
         </div>
+    </header>
 
-    </section>
+    <section class="w-full h-screen flex flex-col  ">
+        <div class="h-screen bg-[url(./assets/img/gambargunung.jpeg)] bg-black/20 bg-cover">
+            <div class="absolute inset-0 bg-black/30 z-0"></div>
+            <div class="flex mt-14 ml-4 md:ml-20 relative z-10 max-w-screen-sm flex-col gap-8">
+                <div class="text flex flex-col gap-2  max-w-xs md:max-w-sm">
+                    <h6 class="mt-10 text-amber-50 text-md md:text-2xl">
+                        M.A OUTDOOR RENT
+                    </h6>
+                    <h1 class="text-4xl md:text-8xl -rotate-6 text-amber-50 font-brush-joney">Sewa Alat <br> <span
+                            class="text-green-500">Outdoor</span> <br> Berkualitas</h1>
+                    <p class="text-xl text-justify text-white ">Temani setiap langkah petualangan mu dengan peralatan
+                        yang terawat,
+                        bersih, dan siap digunakan</p>
 
-
-
-    <!-- ================================================= -->
-    <!-- FITUR UNGGULAN (floating cards, dipindah keluar dari hero) -->
-    <!-- ================================================= -->
-
-    <section class="relative z-30 -mt-20 px-4 md:px-20">
-
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
-            <div class="flex items-center gap-4 rounded-2xl bg-amber-50 p-5 shadow-xl shadow-black/20">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-900/10 text-green-900">
-                    <i class="fa-solid fa-broom text-xl"></i>
                 </div>
                 <div>
                     <h3 class="font-bold text-green-900">Bersih & Terawat</h3>
@@ -263,43 +252,29 @@
         </div>
 
     </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- PAKET -->
-    <!-- ================================================= -->
-
-    <section class="bg-green-900 px-4 pb-16 pt-28 md:px-20 md:pt-32">
-
-        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[280px_1fr]">
-
-            <!-- INTRO -->
-            <div class="flex flex-col justify-center">
-
-                <div class="mb-4 w-min -rotate-6 whitespace-nowrap rounded-sm bg-amber-50 px-3 py-1">
-                    <h2 class="font-brush-joney text-xl text-green-800">Paket</h2>
-                </div>
-
-                <h1 class="font-brush-joney -rotate-3 text-4xl leading-tight text-white md:text-5xl">
-                    Pilih Paket
-                    <br>
-                    Sesuai Kebutuhanmu
-                </h1>
-
-                <p class="mt-4 text-sm text-white/80">
-                    Tersedia berbagai paket dengan harga terbaik
-                    dan perlengkapan lengkap untuk petualanganmu.
+    <section class="w-full px-4 py-2 md:px-20 grid grid-cols-5 gap-4 bg-green-900">
+        <div class="flex flex-col gap-2 p-2 ">
+            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-amber-50">
+                <h2 class="text-xl text-green-800">PAKET</h2>
+            </div>
+            <h1 class="font-brush-joney text-white md:text-5xl max-w-md -rotate-6">Pilih Paket <br> Sesuai Kebutuhanmu
+            </h1>
+            <p class="text-white mt-2 md:text-sm">Tersedia berbagai paket dengan harga terbaik dan perlengkapan lengkap
+                untuk petualanganmu.</p>
+            <button
+                class="text-white flex gap-2 items-center px-4 py-2 rounded-full border border-1 border-white max-w-48 mt-2">
+                <span>Lihat Semua Paket</span>
+                <i class="fa-solid fa-arrow-right mt-1"></i>
+            </button>
+        </div>
+        <div class="bg-amber-50 rounded-md p-2 ">
+            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
+                <h2 class="text-xl text-amber-50">PAKET</h2>
+            </div>
+            <div class="flex flex-col items-center">
+                <h1 class="font-brush-joney text-green-800 md:text-5xl max-w-md -rotate-6">Mantai</h1>
+                <p class="font-brush-joney text-green-800 md:text-md max-w-md -rotate-6">Liburan Santai, Penuh Cerita
                 </p>
-
-                <button
-                    class="mt-5 flex w-max items-center gap-2 rounded-full
-                    border border-white px-5 py-2 text-sm text-white
-                    transition hover:bg-white hover:text-green-900">
-                    <span>Lihat Semua Paket</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
             </div>
 
 
@@ -325,32 +300,31 @@
                     <div class="mx-auto mt-3 flex items-center gap-1 rounded-md bg-green-800 px-3 py-1.5 text-sm text-amber-50">
                         Rp <span class="text-lg font-semibold">75.000</span> /hari
                     </div>
+                    <p class="text-green-800">Teks 1</p>
+                </div>
 
-                    <div class="mt-3 flex justify-evenly">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
+            </div>
+        </div>
+        <div class="bg-amber-50 rounded-md p-2 ">
+            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
+                <h2 class="text-xl text-amber-50">PAKET</h2>
+            </div>
+            <div class="flex flex-col items-center">
+                <h1 class="font-brush-joney text-green-800 md:text-5xl max-w-md -rotate-6">Ngopi</h1>
+                <p class="font-brush-joney text-green-800 md:text-md max-w-md -rotate-6">Ngopi Di Alam, Lebih Nikmat
+                </p>
+            </div>
+            <div class="inline-block border w-full h-28 mt-3">
+                image
+            </div>
+            <div
+                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
+                Rp <span class="text-xl">60.000 </span>/hari
+            </div>
+            <div class="flex justify-evenly">
+                <div class="icon flex flex-col items-center mt-2">
+                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
+                        <i class="fa-solid fa-mountain"></i>
                     </div>
 
                 </div>
@@ -376,31 +350,28 @@
                         Rp <span class="text-lg font-semibold">60.000</span> /hari
                     </div>
 
-                    <div class="mt-3 flex justify-evenly">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
+            </div>
+        </div>
+        <div class="bg-amber-50 rounded-md p-2 ">
+            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
+                <h2 class="text-xl text-amber-50">PAKET</h2>
+            </div>
+            <div class="flex flex-col items-center">
+                <h1 class="font-brush-joney text-green-800 md:text-5xl max-w-md -rotate-6">Mantai</h1>
+                <p class="font-brush-joney text-green-800 md:text-md max-w-md -rotate-6">Liburan Santai, Penuh Cerita
+                </p>
+            </div>
+            <div class="inline-block border w-full h-28 mt-3">
+                image
+            </div>
+            <div
+                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
+                Rp <span class="text-xl">75.000 </span>/hari
+            </div>
+            <div class="flex justify-evenly">
+                <div class="icon flex flex-col items-center mt-2">
+                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
+                        <i class="fa-solid fa-mountain"></i>
                     </div>
 
                 </div>
@@ -425,31 +396,28 @@
                         Rp <span class="text-lg font-semibold">75.000</span> /hari
                     </div>
 
-                    <div class="mt-3 flex justify-evenly">
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
-                        <div class="flex flex-col items-center gap-1">
-                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-800/10 text-green-800">
-                                <i class="fa-solid fa-mountain text-xs"></i>
-                            </div>
-                            <p class="text-[11px] text-green-800">Teks 1</p>
-                        </div>
+            </div>
+        </div>
+        <div class="bg-amber-50 rounded-md p-2 ">
+            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
+                <h2 class="text-xl text-amber-50">PAKET</h2>
+            </div>
+            <div class="flex flex-col items-center">
+                <h1 class="font-brush-joney text-green-800 md:text-5xl max-w-md -rotate-6">Mantai</h1>
+                <p class="font-brush-joney text-green-800 md:text-md max-w-md -rotate-6">Liburan Santai, Penuh Cerita
+                </p>
+            </div>
+            <div class="inline-block border w-full h-28 mt-3">
+                image
+            </div>
+            <div
+                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
+                Rp <span class="text-xl">75.000 </span>/hari
+            </div>
+            <div class="flex justify-evenly">
+                <div class="icon flex flex-col items-center mt-2">
+                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
+                        <i class="fa-solid fa-mountain"></i>
                     </div>
 
                 </div>
@@ -508,36 +476,6 @@
         </div>
 
     </section>
-    <script>
-
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-        const menuIcon = document.getElementById("menuIcon");
-
-        menuToggle.addEventListener("click", () => {
-
-            navMenu.classList.toggle("translate-x-full");
-
-            if (navMenu.classList.contains("translate-x-full")) {
-                menuIcon.classList.remove("fa-xmark");
-                menuIcon.classList.add("fa-bars");
-            } else {
-                menuIcon.classList.remove("fa-bars");
-                menuIcon.classList.add("fa-xmark");
-            }
-
-        });
-
-        navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.add("translate-x-full");
-                menuIcon.classList.remove("fa-xmark");
-                menuIcon.classList.add("fa-bars");
-            });
-        });
-
-    </script>
-
 </body>
 
 </html>
