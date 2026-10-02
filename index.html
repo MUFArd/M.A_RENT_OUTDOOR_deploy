@@ -1,414 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.A Outdoor Rent | Sewa Alat Outdoor Berkualitas</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="icon" href="./assets/img/SEWAALATOUTDOORBERKUALITAS.png">
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Document</title>
 </head>
 
-<body class="bg-amber-50">
-    <header
-        class="flex fixed z-20 w-full bg-amber-50 h-16 flex-row  md:flex-row items-center justify-between gap-4 py-4 border-b">
-        <div class="logo ml-4 md:ml-20 font-bold text-lg">
-            <img src="./assets/img/SEWAALATOUTDOORBERKUALITAS.png" class="w-12 rounded-full" alt="" srcset="">
-        </div>
-        <div class="flex-1 md:ml-10 flex justify-between items-center gap-5">
-            <nav>
-                <button id="menuToggle" class="w-min md:hidden z-50">
-                    <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
-                </button>
+<body class="bg-amber-50 text-green-900" data-root="./" data-page="home">
+    <div id="site-header"></div>
 
-                <ul id="navMenu" class="fixed md:static top-0 right-0 h-screen md:h-auto w-64 md:w-auto
-                        flex-col md:flex-row items-center gap-6 sm:gap-6 text-sm
-                        bg-amber-50 md:bg-transparent shadow-lg md:shadow-none px-6 md:px-0
-                        pt-10 md:pt-0 z-40
-                        flex
-                        translate-x-full md:translate-x-0
-                        transition-transform duration-300 ease-in-out
-                        ">
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Home</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Tentang Kami</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Paket</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Produk</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Galeri</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Testimoni</a></li>
-                    <li class="flex items-center h-10"><a href=""
-                            class="text-green-800 font-semibold hover:text-green-500">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="Chat mr-4 md:mr-20">
-                <button
-                    class="bg-green-800 text-amber-50 flex items-center justify-between gap-3 text-sm px-3 py-2 rounded-full relative  hover:bg-slate-800">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span class="hidden lg:block ">Chat Sekarang</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <section class="w-full flex flex-col  ">
-        <div class="h-screen bg-[url(./assets/img/gambargunung.jpeg)] bg-black/20 bg-cover">
-            <div class="absolute inset-0 bg-black/30 z-0"></div>
-            <div class="flex mt-14 ml-4 md:ml-20 relative z-10 max-w-screen-sm flex-col gap-8">
-                <div class="text flex flex-col gap-2  max-w-xs md:max-w-sm">
-                    <h6 class="mt-10 text-amber-50 text-md md:text-2xl">
-                        M.A OUTDOOR RENT
-                    </h6>
-                    <h1 class="text-4xl md:text-8xl -rotate-6 text-amber-50 font-brush-joney">Sewa Alat <br> <span
-                            class="text-green-500">Outdoor</span> <br> Berkualitas</h1>
-                    <p class="text-xl text-justify text-white ">Temani setiap langkah petualangan mu dengan peralatan
-                        yang terawat,
-                        bersih, dan siap digunakan</p>
-
-                </div>
-                <div class="cta flex items-center gap-4">
-                    <button
-                        class="px-4 py-2 bg-green-800 rounded-full md:text-xl text-amber-50 flex items-center gap-3"><i
-                            class="fa-solid fa-mountain mt-1"></i><span>Lihat Paket</span> <i
-                            class="fa-solid fa-arrow-right mt-1"></i></button>
-                    <button
-                        class="px-4 py-2 bg-black/5 border border-amber-50 border-1 rounded-full md:text-xl text-amber-50 flex items-center gap-2 "><i
-                            class="fa-brands fa-whatsapp mt-1"></i>Chat Sekarang</button>
+    <main class="pt-16">
+        <!-- HERO -->
+        <section
+            class="relative min-h-[560px] md:min-h-[620px] bg-[url(./assets/img/gambargunung.jpeg)] bg-cover bg-center bg-green-900">
+            <div class="absolute inset-0 bg-black/35"></div>
+            <div class="relative z-10 px-4 md:px-20 pt-12 md:pt-16 pb-40 md:pb-32 max-w-2xl text-amber-50">
+                <p class="text-sm md:text-xl mb-2">M.A OUTDOOR RENT</p>
+                <h1 data-anim="fade-up" data-delay="100"
+                    class="font-brush-joney text-5xl md:text-8xl -rotate-3 leading-none">Sewa Alat <span
+                        class="text-green-400">Outdoor</span> Berkualitas</h1>
+                <p data-anim="fade-up" data-delay="250" class="mt-6 text-base md:text-xl max-w-md">Temani setiap langkah
+                    petualanganmu dengan peralatan yang terawat, bersih, dan siap digunakan.</p>
+                <div data-anim="fade-up" data-delay="400" class="mt-6 flex flex-wrap gap-3">
+                    <a href="src/page/paket.html" class="btn-primary"><i class="fa-solid fa-mountain"></i>Lihat Paket<i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/6281234567890"
+                        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-amber-50 hover:bg-white/10"><i
+                            class="fa-brands fa-whatsapp"></i>Chat Sekarang</a>
                 </div>
             </div>
+        </section>
 
+        <!-- KEUNGGULAN -->
+        <section class="relative z-10 -mt-24 md:-mt-16 px-4 md:px-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="feature" data-anim="fade-up" data-delay="0"><i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h2>Bersih &amp; Terawat</h2>
+                        <p>Setiap alat dicuci dan dirawat sebelum disewakan.</p>
+                    </div>
+                </div>
+                <div class="feature" data-anim="fade-up" data-delay="100"><i class="fa-solid fa-medal"></i>
+                    <div>
+                        <h2>Kualitas Terjamin</h2>
+                        <p>Peralatan pilihan untuk petualanganmu.</p>
+                    </div>
+                </div>
+                <div class="feature" data-anim="fade-up" data-delay="200"><i class="fa-solid fa-tag"></i>
+                    <div>
+                        <h2>Harga Bersahabat</h2>
+                        <p>Cocok untuk pelajar &amp; mahasiswa.</p>
+                    </div>
+                </div>
+                <div class="feature" data-anim="fade-up" data-delay="300"><i class="fa-solid fa-user-group"></i>
+                    <div>
+                        <h2>Pelayanan Ramah</h2>
+                        <p>Siap membantu kapan saja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAKET -->
+        <section id="paket" class="mt-12 bg-green-900 px-4 md:px-20 py-10 grid gap-6 lg:grid-cols-5 scroll-mt-16">
+            <div class="lg:col-span-1 text-white flex flex-col gap-3">
+                <span class="tag-label font-brush-joney">PAKET</span>
+                <h2 class="font-brush-joney text-4xl md:text-5xl -rotate-3">Pilih Paket Sesuai Kebutuhanmu</h2>
+                <p>Tersedia berbagai paket dengan harga terbaik dan perlengkapan lengkap untuk petualanganmu.</p>
+                <a href="src/page/paket.html" class="btn-outline self-start">Lihat Semua Paket<i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="lg:col-span-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="paket-card" data-anim="fade-up" data-delay="0"><span
+                        class="tag-label font-brush-joney bg-green-800 text-amber-50">PAKET</span>
+                    <h3 class="font-brush-joney">Mantai</h3>
+                    <p class="tagline font-brush-joney">Liburan Santai, Penuh Cerita</p>
+                    <div class="paket-img">Foto</div>
+                    <div class="harga">Rp <b>75.000</b>/hari</div>
+                    <ul class="paket-list">
+                        <li><i class="fa-solid fa-campground"></i>Tenda 4P</li>
+                        <li><i class="fa-solid fa-bed"></i>Matras</li>
+                        <li><i class="fa-solid fa-moon"></i>Sleeping Bag</li>
+                        <li><i class="fa-solid fa-fire-burner"></i>Kompor</li>
+                    </ul>
+                </article>
+                <article class="paket-card" data-anim="fade-up" data-delay="100"><span
+                        class="tag-label font-brush-joney bg-green-800 text-amber-50">PAKET</span>
+                    <h3 class="font-brush-joney">Ngopi</h3>
+                    <p class="tagline font-brush-joney">Ngopi di Alam, Lebih Nikmat</p>
+                    <div class="paket-img">Foto</div>
+                    <div class="harga">Rp <b>60.000</b>/hari</div>
+                    <ul class="paket-list">
+                        <li><i class="fa-solid fa-campground"></i>Tenda 2P</li>
+                        <li><i class="fa-solid fa-bed"></i>Matras</li>
+                        <li><i class="fa-solid fa-fire-burner"></i>Kompor</li>
+                        <li><i class="fa-solid fa-utensils"></i>Alat Masak</li>
+                    </ul>
+                </article>
+                <article class="paket-card" data-anim="fade-up" data-delay="200"><span
+                        class="tag-label font-brush-joney bg-green-800 text-amber-50">PAKET</span>
+                    <h3 class="font-brush-joney">BBQ</h3>
+                    <p class="tagline font-brush-joney">Masak Enak, Suasana Makin Asik</p>
+                    <div class="paket-img">Foto</div>
+                    <div class="harga">Rp <b>80.000</b>/hari</div>
+                    <ul class="paket-list">
+                        <li><i class="fa-solid fa-campground"></i>Tenda 6P</li>
+                        <li><i class="fa-solid fa-fire"></i>Grill Pan</li>
+                        <li><i class="fa-solid fa-table"></i>Meja Lipat</li>
+                        <li><i class="fa-solid fa-chair"></i>Kursi Lipat</li>
+                    </ul>
+                </article>
+                <article class="paket-card" data-anim="fade-up" data-delay="300"><span
+                        class="tag-label font-brush-joney bg-green-800 text-amber-50">PAKET</span>
+                    <h3 class="font-brush-joney">Tracking</h3>
+                    <p class="tagline font-brush-joney">Jelajahi Alam, Temukan Cerita</p>
+                    <div class="paket-img">Foto</div>
+                    <div class="harga">Rp <b>100.000</b>/hari</div>
+                    <ul class="paket-list">
+                        <li><i class="fa-solid fa-suitcase-rolling"></i>Carrier</li>
+                        <li><i class="fa-solid fa-person-hiking"></i>Trekking Pole</li>
+                        <li><i class="fa-solid fa-shoe-prints"></i>Sepatu</li>
+                        <li><i class="fa-solid fa-lightbulb"></i>Headlamp</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ONE DAY TRIP & OPEN TRIP -->
+        <section class="px-4 md:px-20 py-10 grid lg:grid-cols-2 gap-8">
+            <div class="trip" data-anim="fade-up" data-delay="0">
+                <div class="trip-body">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-sun text-3xl"></i>
+                        <div>
+                            <h2 class="font-brush-joney text-2xl -rotate-2">One Day Trip</h2>
+                            <p class="font-bold text-sm">Jelajah Alam dalam Sehari</p>
+                        </div>
+                    </div>
+                    <p class="text-sm font-semibold">Cocok untuk kamu yang ingin merasakan keseruan alam tanpa harus
+                        menginap.</p>
+                    <ul class="trip-list">
+                        <li><i class="fa-solid fa-location-dot"></i>Destinasi pilihan</li>
+                        <li><i class="fa-solid fa-compass"></i>Guide berpengalaman</li>
+                        <li><i class="fa-solid fa-van-shuttle"></i>Transportasi (opsional)</li>
+                        <li><i class="fa-solid fa-camera"></i>Dokumentasi</li>
+                    </ul>
+                    <a href="src/page/paket.html" class="btn-primary self-start text-sm">Lihat Paket One Day Trip<i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="trip-img">Foto</div>
+            </div>
+            <div class="trip" data-anim="fade-up" data-delay="100">
+                <div class="trip-body">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-users text-3xl"></i>
+                        <div>
+                            <h2 class="font-brush-joney text-2xl -rotate-2">Open Trip</h2>
+                            <p class="font-bold text-sm">Bersama Lebih Seru</p>
+                        </div>
+                    </div>
+                    <p class="text-sm font-semibold">Gabung dengan peserta lain dan nikmati petualangan seru dengan
+                        harga lebih hemat.</p>
+                    <ul class="trip-list">
+                        <li><i class="fa-solid fa-route"></i>Rute populer</li>
+                        <li><i class="fa-solid fa-user-plus"></i>Teman baru</li>
+                        <li><i class="fa-solid fa-wallet"></i>Harga lebih terjangkau</li>
+                        <li><i class="fa-solid fa-flag"></i>Pemandu profesional</li>
+                    </ul>
+                    <a href="src/page/paket.html" class="btn-primary self-start text-sm">Lihat Jadwal Open Trip<i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="trip-img">Foto</div>
+            </div>
+        </section>
+
+        <!-- PRODUK -->
+        <section id="produk" class="px-4 md:px-20 py-8 scroll-mt-16">
+            <p class="font-semibold flex items-center gap-2"><i class="fa-solid fa-mountain"></i>PRODUK UNGGULAN</p>
+            <h2 class="font-brush-joney text-3xl -rotate-1 mb-5">Perlengkapan Outdoor Kami</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="#" class="produk" data-anim="fade-up" data-delay="200">
+                    <div class="produk-img">Foto</div>
+                    <h3>Tenda Camping</h3>
+                    <p>Mulai dari</p><b>Rp 35.000 <small>/hari</small></b>
+                </a>
+                <a href="#" class="produk" data-anim="fade-up" data-delay="300">
+                    <div class="produk-img">Foto</div>
+                    <h3>Carrier</h3>
+                    <p>Mulai dari</p><b>Rp 25.000 <small>/hari</small></b>
+                </a>
+                <a href="#" class="produk" data-anim="fade-up" data-delay="0">
+                    <div class="produk-img">Foto</div>
+                    <h3>Sleeping Bag</h3>
+                    <p>Mulai dari</p><b>Rp 15.000 <small>/hari</small></b>
+                </a>
+                <a href="#" class="produk" data-anim="fade-up" data-delay="100">
+                    <div class="produk-img">Foto</div>
+                    <h3>Kompor Portable</h3>
+                    <p>Mulai dari</p><b>Rp 20.000 <small>/hari</small></b>
+                </a>
+                <a href="#" class="produk" data-anim="fade-up" data-delay="200">
+                    <div class="produk-img">Foto</div>
+                    <h3>Peralatan Masak</h3>
+                    <p>Mulai dari</p><b>Rp 10.000 <small>/hari</small></b>
+                </a>
+                <div
+                    class="col-span-2 md:col-span-1 bg-green-900 text-white rounded-xl p-4 flex flex-col justify-between gap-3">
+                    <p class="font-brush-joney text-2xl -rotate-2">Gear berkualitas untuk petualangan tanpa batas!</p><a
+                        href="src/page/produk.html" class="btn-outline text-sm justify-center">Lihat Semua Produk<i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERI & TESTIMONI -->
+        <section class="px-4 md:px-20 py-10 grid lg:grid-cols-2 gap-10">
+            <div id="galeri" data-anim="fade-right" class="scroll-mt-16">
+                <p class="font-semibold flex items-center gap-2"><i class="fa-solid fa-camera"></i>GALERI</p>
+                <h2 class="font-brush-joney text-3xl -rotate-1 mb-4">Momen Petualangan</h2>
+                <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                    <div class="galeri-item" data-anim="fade-up" data-delay="300">1</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="0">2</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="100">3</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="200">4</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="300">5</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="0">6</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="100">7</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="200">8</div>
+                    <div class="galeri-item" data-anim="fade-up" data-delay="300">9</div>
+                    <a href="src/page/galeri.html" class="galeri-item bg-green-900 text-white font-bold text-xl"
+                        data-anim="fade-up" data-delay="0">+12</a>
+                </div>
+                <a href="src/page/galeri.html" class="btn-primary mt-4 text-sm">Lihat Semua Galeri<i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div id="testimoni" data-anim="fade-left" class="scroll-mt-16">
+                <p class="font-semibold flex items-center gap-2"><i class="fa-solid fa-star"></i>TESTIMONI</p>
+                <h2 class="font-brush-joney text-3xl -rotate-1 mb-4">Apa Kata Mereka?</h2>
+                <div class="grid sm:grid-cols-3 gap-3">
+                    <blockquote class="testi" data-anim="fade-up" data-delay="100"><b>Ricky
+                            Maulana</b><small>Mahasiswa</small><span class="stars">★★★★★</span>
+                        <p>"Alatnya bersih, lengkap, dan pelayanannya ramah. Recommended!"</p>
+                    </blockquote>
+                    <blockquote class="testi" data-anim="fade-up" data-delay="200"><b>Siti
+                            Nurhaliza</b><small>Pelajar</small><span class="stars">★★★★★</span>
+                        <p>"Sangat puas! Harga juga terjangkau dan prosesnya cepat."</p>
+                    </blockquote>
+                    <blockquote class="testi" data-anim="fade-up" data-delay="300"><b>Andi
+                            Pratama</b><small>Mahasiswa</small><span class="stars">★★★★★</span>
+                        <p>"Kualitas alatnya bagus banget, next pasti sewa lagi!"</p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-[url(./assets/img/gambargunung.jpeg)] bg-cover bg-center bg-green-900 relative">
+            <div class="absolute inset-0 bg-green-950/70"></div>
             <div
-                class="grid relative mt-14 z-10 grid-rows-4 px-4 md:px-20 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full ">
-                <div class="col-span-1 flex items-center gap-3 p-2 bg-amber-50 rounded-xl">
-                    <div class="icon text-green-800 p-2  flex items-start justify-center bg-black/10 rounded-full">
-                        <i class="fa-solid fa-mountain text-xl"></i>
-                    </div>
-                    <div class="text text-green-800">
-                        <h2 class="font-bold text-sm md:text-lg">Bersih & Terawat</h2>
-                        <p class="text-xs md:text-lg">Setiap alat dicuci dan dirawat sebelum disewakan.</p>
-                    </div>
+                class="relative px-4 md:px-20 py-10 flex flex-col md:flex-row md:items-center justify-between gap-5 text-white">
+                <div>
+                    <h2 class="font-brush-joney text-3xl -rotate-1">Petualangan berikutnya sudah menunggu.</h2>
+                    <p class="text-sm mt-1">Jangan biarkan perlengkapan menjadi penghalang. Sewa sekarang dan nikmati
+                        perjalanan tanpa khawatir!</p>
                 </div>
-                <div class="col-span-1 flex items-center gap-3 p-2 bg-amber-50 rounded-xl">
-                    <div class="icon text-green-800 p-2  flex items-start justify-center bg-black/10 rounded-full">
-                        <i class="fa-solid fa-mountain text-xl"></i>
-                    </div>
-                    <div class="text text-green-800">
-                        <h2 class="font-bold text-sm md:text-lg">Kualitas Terjamin</h2>
-                        <p class="text-xs md:text-lg">Peralatan pilihan untuk pilihanmu.</p>
-                    </div>
-                </div>
-                <div class="col-span-1 flex items-center gap-3 p-2 bg-amber-50 rounded-xl">
-                    <div class="icon text-green-800 p-2  flex items-start justify-center bg-black/10 rounded-full">
-                        <i class="fa-solid fa-mountain text-xl"></i>
-                    </div>
-                    <div class="text text-green-800">
-                        <h2 class="font-bold text-sm md:text-lg">Harga Bersahabat</h2>
-                        <p class="text-xs md:text-lg">Cocok untuk pelajar & mahasiswa.</p>
-                    </div>
-                </div>
-                <div class="col-span-1 flex items-center gap-3 p-2 bg-amber-50 rounded-xl">
-                    <div class="icon text-green-800 p-2  flex items-start justify-center bg-black/10 rounded-full">
-                        <i class="fa-solid fa-mountain text-xl"></i>
-                    </div>
-                    <div class="text text-green-800">
-                        <h2 class="font-bold text-sm md:text-lg">Pelayanan Ramah</h2>
-                        <p class="text-xs md:text-lg">Siap membantu kapan saja.</p>
-                    </div>
-                </div>
+                <a href="https://wa.me/6281234567890" class="btn-primary bg-green-600 self-start"><i
+                        class="fa-brands fa-whatsapp"></i>Chat Sekarang</a>
+            </div>
+        </section>
+    </main>
 
-            </div>
-        </div>
-    </section>
-    <section
-        class="w-full px-4 py-4 md:px-20 md:py-20 grid grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-1 gap-4 bg-green-900">
-        <div class="flex flex-col gap-2 p-2 md:col-span-2 lg:col-span-1">
-            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-amber-50">
-                <h2 class="text-xl md:text-2xl text-green-800">PAKET</h2>
-            </div>
-            <h1 class="font-brush-joney text-white text-5xl md:text-7xl lg:text-5xl max-w-md -rotate-6">Pilih Paket <br>
-                Sesuai Kebutuhanmu
-            </h1>
-            <p class="text-white mt-4 md:text-2xl lg:text-lg">Tersedia berbagai paket dengan harga terbaik dan
-                perlengkapan lengkap
-                untuk petualanganmu.</p>
-            <button
-                class="text-white flex gap-2 items-center  px-4 py-2 rounded-full border border-1 border-white max-w-48 mt-2">
-                <span>Lihat Semua Paket</span>
-                <i class="fa-solid fa-arrow-right mt-1"></i>
-            </button>
-        </div>
-        <div class="bg-amber-50 rounded-md min-w-xs lg:min-w-0 mx-auto lg:mx-0 p-2  ">
-            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
-                <h2 class="text-xl text-amber-50">PAKET</h2>
-            </div>
-            <div class="flex flex-col items-center">
-                <h1 class="font-brush-joney text-green-800 text-4xl md:text-5xl max-w-md -rotate-6">Mantai</h1>
-                <p class="font-brush-joney text-green-800 text-xl md:text-md max-w-md -rotate-6">Liburan Santai, Penuh
-                    Cerita
-                </p>
-            </div>
-            <div class="inline-block border w-full h-28 mt-3">
-                image
-            </div>
-            <div
-                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
-                Rp <span class="text-xl">75.000 </span>/hari
-            </div>
-            <div class="flex justify-evenly">
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
+    <div id="site-footer"></div>
 
-            </div>
-        </div>
-        <div class="bg-amber-50 rounded-md min-w-xs lg:min-w-0 mx-auto lg:mx-0 p-2 ">
-            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
-                <h2 class="text-xl text-amber-50">PAKET</h2>
-            </div>
-            <div class="flex flex-col items-center">
-                <h1 class="font-brush-joney text-green-800 text-4xl  md:text-5xl max-w-md -rotate-6">Ngopi</h1>
-                <p class="font-brush-joney text-green-800 text-xl  md:text-md max-w-md -rotate-6">Ngopi Di Alam, Lebih
-                    Nikmat
-                </p>
-            </div>
-            <div class="inline-block border w-full h-28 mt-3">
-                image
-            </div>
-            <div
-                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
-                Rp <span class="text-xl">60.000 </span>/hari
-            </div>
-            <div class="flex justify-evenly">
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="bg-amber-50 rounded-md min-w-xs lg:min-w-0 mx-auto lg:mx-0 p-2 ">
-            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
-                <h2 class="text-xl text-amber-50">PAKET</h2>
-            </div>
-            <div class="flex flex-col items-center">
-                <h1 class="font-brush-joney text-green-800 text-4xl md:text-5xl max-w-md -rotate-6">BBQ</h1>
-                <p class="font-brush-joney text-green-800 text-xl md:text-md max-w-md -rotate-6">Masak Enak, Suasana
-                    Makin Asik
-                </p>
-            </div>
-            <div class="inline-block border w-full h-28 mt-3">
-                image
-            </div>
-            <div
-                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
-                Rp <span class="text-xl">80.000 </span>/hari
-            </div>
-            <div class="flex justify-evenly">
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="bg-amber-50 rounded-md p-2 min-w-xs lg:min-w-0 mx-auto lg:mx-0">
-            <div class=" w-min px-2 font-brush-joney -rotate-6 mt-3 rounded-sm bg-green-800">
-                <h2 class="text-xl text-amber-50">PAKET</h2>
-            </div>
-            <div class="flex flex-col items-center">
-                <h1 class="font-brush-joney text-green-800 text-4xl  md:text-5xl max-w-md -rotate-6">Tracking</h1>
-                <p class="font-brush-joney text-green-800 text-xl md:text-md max-w-md -rotate-6">Jelajahi Alam, Temukan
-                    Cerita
-                </p>
-            </div>
-            <div class="inline-block border w-full h-28 mt-3">
-                image
-            </div>
-            <div
-                class="harga bg-green-800 text-amber-50 h-8 mt-3 w-36 mx-auto flex justify-center items-center gap-2 px-3 py-2 rounded-md">
-                Rp <span class="text-xl">100.000 </span>/hari
-            </div>
-            <div class="flex justify-evenly">
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-                <div class="icon flex flex-col items-center mt-2">
-                    <div class="icon-wrapper text-green-800 bg-black/10 rounded-full py-1 px-2 ">
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p class="text-green-800">Teks 1</p>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-    <section class="w-full px-4 py-4 md:px-20 md:py-20 grid grid-cols-1 lg:grid-cols-2 grid-rows-2 lg:grid-rows-1 gap-8 ">
-        <div class="one-day-trip flex flex-col md:flex-row gap-2">
-            <div class="wrapper flex flex-col gap-2 order-2 md:order-1">
-                <div class="flex items-center gap-4">
-                    <i class="fa-solid fa-sun md:text-4xl"></i>
-                    <div class="text-green-800  ">
-                        <h1 class="font-brush-joney text-2xl -rotate-3 ">One Day Trip</h1>
-                        <p class="font-bold text-sm">Jelajah Alam dalam Sehari</p>
-                    </div>
-                </div>
-                <div class="text-green-800 flex flex-col gap-2">
-                    <p class="font-semibold text-sm">Cocok untuk kamu yang ingin merasakan keseruan alam tanpa harus
-                        menginap</p>
-                    <div class="list flex flex-col gap-1 ">
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-
-                    </div>
-                    <button
-                        class="px-4 py-2 m bg-green-800 rounded-full md:text-sm text-amber-50 flex items-center gap-3">Lihat
-                        Paket One Day Trip <i class="fa-solid fa-arrow-right mt-1  "></i></button>
-                </div>
-            </div>
-            <div class="img inline-block min-w-xs border md:order-2">
-                Img
-            </div>
-        </div>
-        <div class="open-trip flex flex-col md:flex-row gap-2">
-            <div class="wrapper flex flex-col gap-2 order-2 md:order-1">
-                <div class="flex items-center gap-4">
-                    <i class="fa-solid fa-users md:text-4xl"></i>
-                    <div class="text-green-800  ">
-                        <h1 class="font-brush-joney text-2xl -rotate-3 ">Open Trip</h1>
-                        <p class="font-bold text-sm">Bersama Lebih Seru</p>
-                    </div>
-                </div>
-                <div class="text-green-800 flex flex-col gap-2">
-                    <p class="font-semibold text-sm">Gabung dengan peserta lain dan nikmati petualangan seru dengan harga lebih hemat</p>
-                    <div class="list flex flex-col gap-1 ">
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-                        <div class="wrapper  flex gap-2 items-center">
-                            <div class="px-1 bg-green-800 rounded-full"><i class="fa-solid fa-sun text-white"></i></div>
-                            <p>List 1</p>
-                        </div>
-
-                    </div>
-                    <button
-                        class="px-4 py-2 m bg-green-800 rounded-full md:text-sm text-amber-50 flex items-center gap-3">Lihat
-                        Jadwal Open Trip <i class="fa-solid fa-arrow-right mt-1  "></i></button>
-                </div>
-            </div>
-            <div class="img inline-block min-w-xs border md:order-2">
-                Img
-            </div>
-        </div>
-
-    </section>
+    <style type="text/tailwindcss">
+        @layer components {
+    .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-800 text-amber-50 hover:bg-green-900 transition; }
+    .btn-outline { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white text-white hover:bg-white/10 transition; }
+    .tag-label { @apply w-fit px-2 py-0.5 rounded-sm bg-amber-50 text-green-800 text-xl -rotate-6; }
+    .feature { @apply flex items-center gap-3 p-3 bg-amber-50 rounded-xl shadow-md; }
+    .feature > i { @apply w-11 h-11 shrink-0 flex items-center justify-center rounded-full bg-green-900/10 text-green-800 text-lg; }
+    .feature h2 { @apply font-bold text-sm md:text-base; }
+    .feature p { @apply text-xs md:text-sm text-green-800; }
+    .paket-card { @apply bg-amber-50 rounded-md p-3 flex flex-col gap-2 text-green-800; }
+    .paket-card h3 { @apply text-4xl -rotate-3 text-center; }
+    .paket-card .tagline { @apply text-lg text-center -rotate-3; }
+    .paket-img, .trip-img, .produk-img, .galeri-item { @apply bg-gray-200 border border-gray-300 rounded-md flex items-center justify-center text-gray-500 text-xs; }
+    .paket-img { @apply h-28; }
+    .harga { @apply bg-green-800 text-amber-50 rounded-md px-3 py-1.5 mx-auto w-fit; }
+    .harga b { @apply text-xl font-semibold; }
+    .paket-list { @apply grid grid-cols-4 gap-1 text-center text-[11px]; }
+    .paket-list i { @apply block mx-auto mb-1 w-8 h-8 leading-8 rounded-full bg-black/10; }
+    .trip { @apply flex flex-col-reverse sm:flex-row gap-3 text-green-800; }
+    .trip-body { @apply flex flex-col gap-3 sm:w-1/2; }
+    .trip-list { @apply flex flex-col gap-1.5 text-sm; }
+    .trip-list i { @apply w-6 h-6 leading-6 text-center rounded-full bg-green-800 text-white text-xs mr-2; }
+    .trip-img { @apply sm:w-1/2 min-h-44; }
+    .produk { @apply bg-white/70 rounded-xl p-2 flex flex-col text-sm hover:shadow-md transition; }
+    .produk-img { @apply h-24 mb-2; }
+    .produk h3 { @apply font-semibold; }
+    .produk p { @apply text-xs text-green-800/70; }
+    .produk small { @apply font-normal text-xs; }
+    .galeri-item { @apply aspect-square; }
+    .testi { @apply bg-white/70 rounded-xl p-3 text-sm flex flex-col gap-1; }
+    .testi small { @apply text-green-800/70; }
+    .stars { @apply text-amber-500; }
+  }
+</style>
+    <script src="./assets/js/index.js"></script>
 </body>
-<script src="./assets/js/index.js"></script>
 
 </html>
