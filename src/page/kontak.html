@@ -15,32 +15,32 @@
     <div id="site-header"></div>
     <main class="pt-16">
         <section class="bg-green-900 text-white px-4 md:px-20 py-12">
-            <h1 class="font-brush-joney text-5xl md:text-6xl -rotate-2">Kontak</h1>
-            <p class="mt-3 max-w-xl text-green-100">Ada pertanyaan atau mau pesan? Kirim pesan lewat form di bawah, kami
-                balas di WhatsApp.</p>
+            <h1 data-anim="fade-up" class="font-brush-joney text-5xl md:text-6xl -rotate-2">Kontak</h1>
+            <p data-anim="fade-up" data-delay="150" class="mt-3 max-w-xl text-green-100">Ada pertanyaan atau mau pesan?
+                Kirim pesan lewat form di bawah, kami balas di WhatsApp.</p>
         </section>
         <section class="px-4 md:px-20 py-10 grid lg:grid-cols-2 gap-8">
             <div class="flex flex-col gap-4">
                 <h2 class="font-brush-joney text-3xl -rotate-1">Informasi Kontak</h2>
-                <div class="card flex items-center gap-3"><i
+                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="0"><i
                         class="fa-brands fa-whatsapp w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
                     <div><b class="text-sm">WhatsApp</b>
-                        <p class="text-sm text-green-800">+62 812-3456-7890</p>
+                        <p class="text-sm text-green-800">0896 0698 1787</p>
                     </div>
                 </div>
-                <div class="card flex items-center gap-3"><i
+                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="100"><i
                         class="fa-brands fa-instagram w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
                     <div><b class="text-sm">Instagram</b>
-                        <p class="text-sm text-green-800">@ma.outdoorent</p>
+                        <p class="text-sm text-green-800">@m.a_outdoor_rent</p>
                     </div>
                 </div>
-                <div class="card flex items-center gap-3"><i
+                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="200"><i
                         class="fa-solid fa-location-dot w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
                     <div><b class="text-sm">Alamat</b>
                         <p class="text-sm text-green-800">Parung Panjang, Bogor</p>
                     </div>
                 </div>
-                <div class="card flex items-center gap-3"><i
+                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="300"><i
                         class="fa-solid fa-clock w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
                     <div><b class="text-sm">Jam Operasional</b>
                         <p class="text-sm text-green-800">Setiap hari 08.00 - 21.00 WIB</p>
@@ -62,8 +62,9 @@
                         <option>Info Produk</option>
                         <option>Lainnya</option>
                     </select></div>
-                <div><label class="lbl" for="pesan">Pesan *</label><textarea class="field" id="pesan" rows="4"
-                        placeholder="Tulis pesanmu di sini..." required></textarea></div>
+                <div id="ringkasan"></div>
+                <div><label id="lblPesan" class="lbl" for="pesan">Pesan *</label><textarea class="field" id="pesan"
+                        rows="4" placeholder="Tulis pesanmu di sini..."></textarea></div>
                 <p id="err" class="text-sm text-red-300 hidden"></p>
                 <button class="btn-primary justify-center bg-green-600 hover:bg-green-500" type="submit"><i
                         class="fa-brands fa-whatsapp"></i>Kirim via WhatsApp</button>
@@ -82,30 +83,10 @@
     .lbl { @apply block text-sm mb-1 text-green-100; }
   }
 </style>
+    <script src="../../assets/js/data-produk.js"></script>
+    <script src="../../assets/js/keranjang.js"></script>
+    <script src="../../assets/js/kontak-form.js"></script>
     <script src="../../assets/js/index.js"></script>
-    <script>
-        // GANTI dengan nomor WhatsApp penjual: format internasional, tanpa + atau spasi (62 = Indonesia).
-        const WA_NUMBER = "6287873951239";
-
-        const $ = id => document.getElementById(id);
-        const pre = new URLSearchParams(location.search).get("pesan");
-        if (pre) $("pesan").value = pre;
-
-        $("waForm").addEventListener("submit", e => {
-            e.preventDefault();
-            const nama = $("nama").value.trim(), hp = $("hp").value.trim(), email = $("email").value.trim(), pesan = $("pesan").value.trim();
-            const err = msg => { $("err").textContent = msg; $("err").classList.remove("hidden"); };
-            if (!nama || !hp || !pesan) return err("Nama, nomor HP, dan pesan wajib diisi.");
-            if (!/^[0-9+\-\s]{9,16}$/.test(hp)) return err("Nomor HP tidak valid. Contoh: 081234567890.");
-            if (email && !/^\S+@\S+\.\S+$/.test(email)) return err("Format email belum benar.");
-            $("err").classList.add("hidden");
-
-            const text = `Halo M.A Outdoor Rent, saya ${nama}.\n` +
-                `No. HP: ${hp}\n` + (email ? `Email: ${email}\n` : "") +
-                `Jenis: ${$("jenis").value}\n\nPesan:\n${pesan}`;
-            window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
-        });
-    </script>
 </body>
 
 </html>
