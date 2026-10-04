@@ -1,79 +1,37 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak | M.A Outdoor Rent</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="icon" href="../../assets/img/SEWAALATOUTDOORBERKUALITAS.png">
-    <link rel="stylesheet" href="../../assets/css/font.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | M.A Outdoor Rent</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="../../assets/img/SEWAALATOUTDOORBERKUALITAS.png">
+  <link rel="stylesheet" href="../../assets/css/font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body class="bg-amber-50 text-green-900" data-root="../../" data-page="kontak">
-    <div id="site-header"></div>
-    <main class="pt-16">
-        <section class="bg-green-900 text-white px-4 md:px-20 py-12">
-            <h1 data-anim="fade-up" class="font-brush-joney text-5xl md:text-6xl -rotate-2">Kontak</h1>
-            <p data-anim="fade-up" data-delay="150" class="mt-3 max-w-xl text-green-100">Ada pertanyaan atau mau pesan?
-                Kirim pesan lewat form di bawah, kami balas di WhatsApp.</p>
-        </section>
-        <section class="px-4 md:px-20 py-10 grid lg:grid-cols-2 gap-8">
-            <div class="flex flex-col gap-4">
-                <h2 class="font-brush-joney text-3xl -rotate-1">Informasi Kontak</h2>
-                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="0"><i
-                        class="fa-brands fa-whatsapp w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
-                    <div><b class="text-sm">WhatsApp</b>
-                        <p class="text-sm text-green-800">0896 0698 1787</p>
-                    </div>
-                </div>
-                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="100"><i
-                        class="fa-brands fa-instagram w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
-                    <div><b class="text-sm">Instagram</b>
-                        <p class="text-sm text-green-800">@m.a_outdoor_rent</p>
-                    </div>
-                </div>
-                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="200"><i
-                        class="fa-solid fa-location-dot w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
-                    <div><b class="text-sm">Alamat</b>
-                        <p class="text-sm text-green-800">Parung Panjang, Bogor</p>
-                    </div>
-                </div>
-                <div class="card flex items-center gap-3" data-anim="fade-up" data-delay="300"><i
-                        class="fa-solid fa-clock w-10 h-10 leading-10 text-center rounded-full bg-green-800 text-white"></i>
-                    <div><b class="text-sm">Jam Operasional</b>
-                        <p class="text-sm text-green-800">Setiap hari 08.00 - 21.00 WIB</p>
-                    </div>
-                </div>
-            </div>
-            <form id="waForm" class="bg-green-900 text-white rounded-2xl p-5 md:p-6 flex flex-col gap-4" novalidate>
-                <div>
-                    <h2 class="font-brush-joney text-3xl -rotate-1">Kirim Pesan</h2>
-                    <p class="text-sm text-green-100">Isi form, lalu pesanmu dikirim lewat WhatsApp ke penjual.</p>
-                </div>
-                <div><label class="lbl" for="nama">Nama lengkap *</label><input class="field" id="nama" required></div>
-                <div><label class="lbl" for="hp">Nomor HP / WhatsApp *</label><input class="field" id="hp" type="tel"
-                        inputmode="tel" placeholder="08xxxxxxxxxx" required></div>
-                <div><label class="lbl" for="email">Alamat email</label><input class="field" id="email" type="email"
-                        placeholder="opsional"></div>
-                <div><label class="lbl" for="jenis">Jenis pertanyaan</label><select class="field" id="jenis">
-                        <option>Pemesanan</option>
-                        <option>Info Produk</option>
-                        <option>Lainnya</option>
-                    </select></div>
-                <div id="ringkasan"></div>
-                <div><label id="lblPesan" class="lbl" for="pesan">Pesan *</label><textarea class="field" id="pesan"
-                        rows="4" placeholder="Tulis pesanmu di sini..."></textarea></div>
-                <p id="err" class="text-sm text-red-300 hidden"></p>
-                <button class="btn-primary justify-center bg-green-600 hover:bg-green-500" type="submit"><i
-                        class="fa-brands fa-whatsapp"></i>Kirim via WhatsApp</button>
-            </form>
-        </section>
-    </main>
-    <div id="site-footer"></div>
-    <style type="text/tailwindcss">
-        @layer components {
+<div id="site-header"></div>
+<main class="pt-16">
+  <section class="bg-green-900 text-white px-4 md:px-20 py-12">
+    <h1 data-anim="fade-up" class="font-brush-joney text-5xl md:text-6xl -rotate-2">Kontak</h1>
+    <p data-anim="fade-up" data-delay="150" class="mt-3 max-w-xl text-green-100">Ada pertanyaan atau mau pesan? Kirim pesan lewat form di bawah, kami balas di WhatsApp.</p>
+  </section>
+<section class="px-4 md:px-20 py-10 grid lg:grid-cols-2 gap-8">
+  <div class="flex flex-col gap-4"><h2 class="font-brush-joney text-3xl -rotate-1">Informasi Kontak</h2><div class="card flex items-center gap-3" data-anim="fade-up" data-delay="0"><i class="fa-brands fa-whatsapp w-12 h-12 shrink-0 flex items-center justify-center text-xl rounded-full bg-green-800 text-white"></i><div><b class="text-sm">WhatsApp</b><p class="text-sm text-green-800">0896 0698 1787</p></div></div><div class="card flex items-center gap-3" data-anim="fade-up" data-delay="100"><i class="fa-brands fa-instagram w-12 h-12 shrink-0 flex items-center justify-center text-xl rounded-full bg-green-800 text-white"></i><div><b class="text-sm">Instagram</b><p class="text-sm text-green-800">@m.a_outdoor_rent</p></div></div><div class="card flex items-center gap-3" data-anim="fade-up" data-delay="200"><i class="fa-solid fa-location-dot w-12 h-12 shrink-0 flex items-center justify-center text-xl rounded-full bg-green-800 text-white"></i><div><b class="text-sm">Alamat</b><p class="text-sm text-green-800">Parung Panjang, Bogor</p></div></div><div class="card flex items-center gap-3" data-anim="fade-up" data-delay="300"><i class="fa-solid fa-clock w-12 h-12 shrink-0 flex items-center justify-center text-xl rounded-full bg-green-800 text-white"></i><div><b class="text-sm">Jam Operasional</b><p class="text-sm text-green-800">Setiap hari 08.00 - 21.00 WIB</p></div></div></div>
+  <form id="waForm" class="bg-green-900 text-white rounded-2xl p-5 md:p-6 flex flex-col gap-4" novalidate>
+  <div><h2 class="font-brush-joney text-3xl -rotate-1">Kirim Pesan</h2><p class="text-sm text-green-100">Tulis pesanmu, lalu kami lanjutkan lewat WhatsApp.</p></div>
+  <div><label class="lbl" for="nama">Nama *</label><input class="field" id="nama" autocomplete="name" required></div>
+  <div id="ringkasan"></div>
+  <div><label id="lblPesan" class="lbl" for="pesan">Pesanan *</label><textarea class="field" id="pesan" rows="4" placeholder="Tulis pesanmu di sini..."></textarea></div>
+  <div><label class="lbl" for="catatan">Catatan (opsional)</label><textarea class="field" id="catatan" rows="2" placeholder="Tanggal ambil, kebutuhan khusus, dll."></textarea></div>
+  <p id="err" class="text-sm text-red-300 hidden"></p>
+  <button class="btn-primary justify-center bg-green-600 hover:bg-green-500" type="submit"><i class="fa-brands fa-whatsapp"></i>Kirim via WhatsApp</button>
+</form>
+</section>
+</main>
+<div id="site-footer"></div>
+<style type="text/tailwindcss">
+  @layer components {
     .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-800 text-amber-50 hover:bg-green-900 transition; }
     .btn-outline { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-green-800 text-green-800 hover:bg-green-800 hover:text-white transition; }
     .tag-label { @apply w-fit px-2 py-0.5 rounded-sm bg-green-800 text-amber-50 text-xl -rotate-6; }
@@ -83,10 +41,9 @@
     .lbl { @apply block text-sm mb-1 text-green-100; }
   }
 </style>
-    <script src="../../assets/js/data-produk.js"></script>
-    <script src="../../assets/js/keranjang.js"></script>
-    <script src="../../assets/js/kontak-form.js"></script>
-    <script src="../../assets/js/index.js"></script>
+<script src="../../assets/js/data-produk.js"></script>
+<script src="../../assets/js/keranjang.js"></script>
+<script src="../../assets/js/kontak-form.js"></script>
+<script src="../../assets/js/index.js"></script>
 </body>
-
 </html>

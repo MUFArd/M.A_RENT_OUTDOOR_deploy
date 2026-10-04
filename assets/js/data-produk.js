@@ -9,6 +9,14 @@ window.TOKO = {
     wa: "6289606981787",          // nomor WA format internasional: 62 + nomor tanpa 0 di depan, tanpa spasi/+
     tampil: "0896 0698 1787",     // versi yang ditampilkan ke pengunjung
     ig: "m.a_outdoor_rent",       // username Instagram (tanpa @)
+    alamat: "Parung Panjang, Bogor",              // teks alamat yang tampil di footer
+    lokasi: "M.A Outdoor Rent, Parung Panjang, Bogor",   // kata kunci Google Maps: NAMA TOKO + daerah, supaya peta menunjuk tokonya
+    // Opsional: isi agar peta menunjuk titik yang PERSIS. Buka Google Maps -> cari tokomu -> Bagikan:
+    //   mapsUrl   = "Salin link"  (contoh https://maps.app.goo.gl/xxxx)
+    //   mapsEmbed = "Sematkan peta" -> salin isi src="..." dari kode iframe-nya
+    // Dikosongkan = otomatis mencari "lokasi" di atas. Paling akurat: isi mapsUrl & mapsEmbed dari halaman toko di Google Maps.
+    mapsUrl: "",
+    mapsEmbed: "",
 };
 
 // ---- Paket ----------------------------------------------------------

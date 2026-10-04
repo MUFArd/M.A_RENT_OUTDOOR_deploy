@@ -5,6 +5,21 @@ const page = document.body.dataset.page || "home";
 const T = window.TOKO || { wa: "6289606981787", tampil: "0896 0698 1787", ig: "m.a_outdoor_rent" }; // dari data-produk.js
 const WA = "https://wa.me/" + T.wa;
 
+// ---- Google Maps: klik peta -> membuka Google Maps di tab baru ----
+const MAP_Q = T.lokasi || T.alamat || "M.A Outdoor Rent, Parung Panjang, Bogor";   // yang dicari di Google Maps = toko
+const MAP_URL = T.mapsUrl || "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(MAP_Q);
+const MAP_EMBED = T.mapsEmbed || "https://www.google.com/maps?q=" + encodeURIComponent(MAP_Q) + "&output=embed";
+// Peta kecil yang tampil dengan <iframe>. pointer-events-none membuat klik "menembus" iframe
+// dan jatuh ke link <a> di atasnya, sehingga seluruh peta berfungsi sebagai tombol.
+const peta = (tinggi = "h-40") => `
+  <a href="${MAP_URL}" target="_blank" rel="noopener" aria-label="Buka lokasi di Google Maps"
+     class="group relative block ${tinggi} rounded-xl overflow-hidden border border-green-900/20">
+    <iframe src="${MAP_EMBED}" class="w-full h-full pointer-events-none" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi M.A Outdoor Rent"></iframe>
+    <span class="absolute inset-0 flex items-end justify-end p-2 group-hover:bg-black/20 transition">
+      <span class="text-xs bg-white text-green-900 font-semibold px-3 py-1.5 rounded-full shadow"><i class="fa-solid fa-location-arrow mr-1"></i>Buka di Google Maps</span>
+    </span>
+  </a>`;
+
 const links = [
   ["home", "Home", root + "index.html"],
   ["tentang", "Tentang Kami", root + "src/page/tentang_kami.html"],
@@ -19,7 +34,11 @@ const navItems = links.map(([id, label, href]) => `
   <li><a href="${href}" class="block py-2 md:py-1 font-semibold text-sm border-b-2 transition
     ${id === page ? "text-green-900 border-green-800" : "text-green-800 border-transparent hover:text-green-500"}">${label}</a></li>`).join("");
 
-document.getElementById("site-header").innerHTML = `
+// Halaman polos (mis. pesan.html) sengaja tidak punya #site-header / #site-footer.
+// setHTML melewati elemen yang tidak ada, jadi file ini tetap aman dipakai di sana.
+const setHTML = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
+
+setHTML("site-header", `
 <header class="fixed top-0 z-30 w-full h-16 bg-amber-50/95 backdrop-blur border-b border-green-900/10 flex items-center justify-between px-4 md:px-20">
   <a href="${root}index.html"><img src="${root}assets/img/SEWAALATOUTDOORBERKUALITAS.png" class="w-12 h-12 rounded-full" alt="Logo M.A Outdoor Rent"></a>
   <nav>
@@ -34,9 +53,9 @@ document.getElementById("site-header").innerHTML = `
     </a>
     <button id="menuToggle" class="md:hidden relative z-50 text-green-900 text-xl w-8" aria-label="Buka menu"><i id="menuIcon" class="fa-solid fa-bars"></i></button>
   </div>
-</header>`;
+</header>`);
 
-document.getElementById("site-footer").innerHTML = `
+setHTML("site-footer", `
 <footer id="kontak" class="bg-green-950 text-white px-4 md:px-20 py-10">
   <div class="grid md:grid-cols-4 gap-8 mb-8">
     <div class="flex items-start gap-3">
@@ -47,24 +66,30 @@ document.getElementById("site-footer").innerHTML = `
       <ul class="space-y-2 text-sm text-green-200/80">
         <li><i class="fa-solid fa-phone w-5"></i>${T.tampil}</li>
         <li><i class="fa-brands fa-instagram w-5"></i>@${T.ig}</li>
-        <li><i class="fa-solid fa-location-dot w-5"></i>Parung Panjang, Bogor</li>
+        <li><a href="${MAP_URL}" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-solid fa-location-dot w-5"></i>${T.alamat || MAP_Q}</a></li>
       </ul></div>
     <div><h5 class="font-bold mb-3">Ikuti Kami</h5>
       <div class="flex gap-4 text-xl"><a href="https://instagram.com/${T.ig}" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="${WA}" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></div></div>
-    <p class="font-brush-joney text-2xl text-green-200 md:text-right md:self-end -rotate-3">Good People, Great Adventure</p>
+    <div><h5 class="font-bold mb-3">Lokasi Kami</h5>${peta("h-32")}</div>
   </div>
   <div class="flex flex-col sm:flex-row justify-between gap-3 pt-6 border-t border-white/10 text-xs text-green-200/70">
     <p>&copy; 2025 M.A Outdoor Rent. All rights reserved.</p>
+    <p class="font-brush-joney text-lg text-green-200">Good People, Great Adventure</p>
     <div class="flex gap-4"><a href="#">Syarat &amp; Ketentuan</a><a href="#">Kebijakan Privasi</a></div>
   </div>
-</footer>`;
+</footer>`);
 
-const menu = document.getElementById("navMenu"), icon = document.getElementById("menuIcon");
-document.getElementById("menuToggle").addEventListener("click", () => {
-  const open = menu.classList.toggle("translate-x-full") === false;
-  icon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-});
-menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.add("translate-x-full"); icon.className = "fa-solid fa-bars"; } });
+// Tempat peta di halaman (mis. <div data-peta="h-72"></div>) diisi di sini, sesudah footer dibuat
+document.querySelectorAll("[data-peta]").forEach(el => { el.innerHTML = peta(el.dataset.peta); });
+
+if (document.getElementById("navMenu")) {   // menu hanya ada di halaman yang punya header
+  const menu = document.getElementById("navMenu"), icon = document.getElementById("menuIcon");
+  document.getElementById("menuToggle").addEventListener("click", () => {
+    const open = menu.classList.toggle("translate-x-full") === false;
+    icon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+  });
+  menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.classList.add("translate-x-full"); icon.className = "fa-solid fa-bars"; } });
+}
 
 /* ================= ANIMASI & INTERAKSI ================= */
 (() => {
@@ -104,7 +129,7 @@ menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.class
   toTop.onclick = () => window.scrollTo({ top: 0 });
   document.body.appendChild(toTop);
   const onScroll = () => {
-    header.classList.toggle("scrolled", scrollY > 8);
+    if (header) header.classList.toggle("scrolled", scrollY > 8);
     toTop.classList.toggle("show", scrollY > 500);
   };
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
@@ -115,10 +140,8 @@ menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.class
   // Grup:   <div data-stagger="100"> -> semua anaknya fade-up bergantian tiap 100ms
   if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
 
-  const FROM = {
-    "fade": "none", "fade-up": "translateY(28px)", "fade-down": "translateY(-28px)",
-    "fade-left": "translateX(28px)", "fade-right": "translateX(-28px)", "zoom-in": "scale(.9)"
-  };
+  const FROM = { "fade": "none", "fade-up": "translateY(28px)", "fade-down": "translateY(-28px)",
+                 "fade-left": "translateX(28px)", "fade-right": "translateX(-28px)", "zoom-in": "scale(.9)" };
 
   document.querySelectorAll("[data-stagger]").forEach(group => {
     const gap = parseInt(group.dataset.stagger) || 100;
@@ -134,7 +157,7 @@ menu.addEventListener("click", e => { if (e.target.tagName === "A") { menu.class
     el.classList.add("in");
     const total = (parseInt(el.dataset.delay) || 0) + (parseInt(el.dataset.duration) || 700) + 200;
     // setelah selesai, lepas class animasi supaya efek hover tidak tertunda
-    setTimeout(() => { el.classList.remove("rv", "in");["--from", "--d", "--t"].forEach(v => el.style.removeProperty(v)); }, total);
+    setTimeout(() => { el.classList.remove("rv", "in"); ["--from", "--d", "--t"].forEach(v => el.style.removeProperty(v)); }, total);
   }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
   document.querySelectorAll("[data-anim]").forEach(el => {

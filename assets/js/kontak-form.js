@@ -1,33 +1,31 @@
 /* =====================================================================
-   FORM KONTAK  —  halaman kontak.html
+   FORM KONTAK (kontak.html)  —  Nama, Pesan, Catatan + kotak "Pesanan kamu"
 
    Tugasnya:
-   1. Menampilkan "Pesanan kamu" (barang dari keranjang) di dalam form.
+   1. Menampilkan kotak "Pesanan kamu" (barang yang dipilih di halaman
+      Paket/Produk) di dalam form: jumlah, harga, hapus, lama sewa, total.
    2. Mengecek isian form.
-   3. Menyusun semua isian + pesanan menjadi satu teks, lalu membuka
-      WhatsApp penjual dengan teks itu sudah terisi.
-   Catatan: pembeli tetap menekan tombol kirim sendiri di WhatsApp.
+   3. Menyusun isian + pesanan menjadi satu teks, lalu membuka WhatsApp
+      penjual dengan teks itu sudah terisi (pembeli menekan kirim sendiri).
    ===================================================================== */
 (() => {
-    "use strict";
-    const K = window.Keranjang;                                // dari keranjang.js
-    const WA = (window.TOKO || {}).wa || "6289606981787";      // nomor penjual dari data-produk.js
-    const $ = id => document.getElementById(id);
+  "use strict";
+  const K = window.Keranjang;                    // keranjang dari keranjang.js
+  const $ = id => document.getElementById(id);
 
-    /* ---------- 1. RINGKASAN PESANAN DI DALAM FORM ---------- */
-    function renderRingkasan() {
-        const wadah = $("ringkasan");
-        const items = K.daftar();
-        // label kolom pesan berubah: wajib jika keranjang kosong, opsional jika ada pesanan
-        $("lblPesan").textContent = items.length ? "Catatan tambahan (opsional)" : "Pesan *";
+  /* ---------- 1. KOTAK "PESANAN KAMU" ---------- */
+  function renderRingkasan() {
+    const items = K.daftar();
+    // Kolom Pesan wajib kalau keranjang kosong; opsional kalau sudah ada barang
+    $("lblPesan").textContent = items.length ? "Pesan tambahan (opsional)" : "Pesan *";
 
-        if (!items.length) {
-            wadah.innerHTML = `<p class="text-sm text-green-100">Belum ada barang dipilih.
-        <a class="underline" href="paket.html">Pilih paket</a> atau <a class="underline" href="produk.html">pilih produk</a>,
+    if (!items.length) {
+      $("ringkasan").innerHTML = `<p class="text-sm text-green-100">Belum ada barang dipilih.
+        <a class="underline" href="paket.html">Lihat paket</a> atau <a class="underline" href="produk.html">lihat produk</a>,
         atau langsung tulis pesan di bawah.</p>`;
-            return;
-        }
-        wadah.innerHTML = `<div class="bg-green-950/60 rounded-xl p-3">
+      return;
+    }
+    $("ringkasan").innerHTML = `<div class="bg-green-950/60 rounded-xl p-3">
       <p class="font-bold mb-2"><i class="fa-solid fa-basket-shopping mr-2"></i>Pesanan kamu</p>
       <ul class="text-sm space-y-1.5">
         ${items.map(i => `<li class="flex justify-between gap-2">
@@ -43,43 +41,32 @@
       <p class="flex justify-between font-bold mt-2"><span>Estimasi total</span><span>${K.rp(K.total())}</span></p>
       <button type="button" id="kosongkan" class="text-xs underline text-green-200 mt-2">Kosongkan pesanan</button>
     </div>`;
-    }
+  }
 
-    // Klik ✕ / "Kosongkan" / ubah lama sewa
-    $("ringkasan").addEventListener("click", e => {
-        if (e.target.dataset.hapus) K.hapus(e.target.dataset.hapus);
-        if (e.target.id === "kosongkan") K.kosongkan();
-    });
-    $("ringkasan").addEventListener("change", e => { if (e.target.id === "hari") K.setHari(e.target.value); });
-    document.addEventListener("keranjang:ubah", renderRingkasan);   // tampil ulang tiap keranjang berubah
-    renderRingkasan();
+  // Klik ✕ / "Kosongkan" / ubah lama sewa (satu pendengar untuk seluruh kotak)
+  $("ringkasan").addEventListener("click", e => {
+    if (e.target.dataset.hapus) K.hapus(e.target.dataset.hapus);
+    if (e.target.id === "kosongkan") K.kosongkan();
+  });
+  $("ringkasan").addEventListener("change", e => { if (e.target.id === "hari") K.setHari(e.target.value); });
+  document.addEventListener("keranjang:ubah", renderRingkasan);   // tampil ulang tiap keranjang berubah
+  renderRingkasan();
 
-    // Tombol "tanya paket" di halaman lain mengirim ?pesan=... -> otomatis mengisi kolom pesan
-    const awal = new URLSearchParams(location.search).get("pesan");
-    if (awal) $("pesan").value = awal;
+  // Tombol "tanya ..." di halaman lain bisa mengirim ?pesan=... -> mengisi kolom pesan
+  const awal = new URLSearchParams(location.search).get("pesan");
+  if (awal) $("pesan").value = awal;
 
-    /* ---------- 2 & 3. CEK FORM LALU KIRIM KE WHATSAPP ---------- */
-    $("waForm").addEventListener("submit", e => {
-        e.preventDefault();
-        const nama = $("nama").value.trim(), hp = $("hp").value.trim();
-        const email = $("email").value.trim(), pesan = $("pesan").value.trim();
-        const adaPesanan = K.daftar().length > 0;
-        const error = msg => { $("err").textContent = msg; $("err").classList.remove("hidden"); };
+  /* ---------- 2 & 3. CEK FORM LALU KIRIM KE WHATSAPP ---------- */
+  $("waForm").addEventListener("submit", e => {
+    e.preventDefault();                          // cegah halaman reload
+    const nama = $("nama").value.trim(), pesan = $("pesan").value.trim(), catatan = $("catatan").value.trim();
+    const error = msg => { $("err").textContent = msg; $("err").classList.remove("hidden"); };
 
-        if (!nama || !hp) return error("Nama dan nomor HP wajib diisi.");
-        if (!adaPesanan && !pesan) return error("Tulis pesan atau pilih barang terlebih dulu.");
-        if (!/^[0-9+\-\s]{9,16}$/.test(hp)) return error("Nomor HP tidak valid. Contoh: 081234567890.");
-        if (email && !/^\S+@\S+\.\S+$/.test(email)) return error("Format email belum benar.");
-        $("err").classList.add("hidden");
+    if (!nama) return error("Nama wajib diisi.");
+    if (!K.daftar().length && !pesan) return error("Tulis pesan atau pilih barang terlebih dulu.");
+    $("err").classList.add("hidden");
 
-        // Susun isi chat. Bagian yang kosong dilewati.
-        const bagian = [
-            `Halo M.A Outdoor Rent, saya ${nama}.`,
-            `No. HP: ${hp}` + (email ? `\nEmail: ${email}` : "") + `\nJenis: ${$("jenis").value}`,
-            adaPesanan ? K.teks() : "",
-            pesan ? `${adaPesanan ? "Catatan" : "Pesan"}:\n${pesan}` : "",
-        ].filter(Boolean);
-
-        window.open(`https://wa.me/${WA}?text=${encodeURIComponent(bagian.join("\n\n"))}`, "_blank");
-    });
+    // Daftar barang dari keranjang ikut otomatis (pesanan = teks() adalah bawaan linkWA)
+    window.open(K.linkWA({ nama, pesan, catatan }), "_blank");
+  });
 })();

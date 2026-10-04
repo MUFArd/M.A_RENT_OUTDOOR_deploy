@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <!-- halaman khusus QR code: jangan dimunculkan di Google -->
+    <title>Pesan Sekarang | M.A Outdoor Rent</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="../../assets/img/SEWAALATOUTDOORBERKUALITAS.png">
+    <link rel="stylesheet" href="../../assets/css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-amber-50 text-green-900" data-root="../../" data-page="pesan">
+    <main>
+        <!-- Kepala polos: hanya logo + nama toko (tanpa menu & tanpa link) -->
+        <section class="bg-green-900 text-white px-4 md:px-20 py-8 flex items-center gap-4">
+            <img src="../../assets/img/SEWAALATOUTDOORBERKUALITAS.png" class="w-16 h-16 rounded-full shrink-0"
+                alt="Logo M.A Outdoor Rent">
+            <div>
+                <p class="text-sm text-green-200">M.A OUTDOOR RENT</p>
+                <h1 data-anim="fade-up" class="font-brush-joney text-4xl md:text-5xl -rotate-2">Pesan Sekarang</h1>
+                <p class="mt-1 text-sm text-green-100">Pilih paket atau produk, atur jumlahnya, lalu kirim pesanan ke
+                    WhatsApp kami.</p>
+            </div>
+        </section>
+
+        <section class="px-4 md:px-20 py-8 pb-28 lg:pb-8 grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+            <!-- KIRI: katalog -->
+            <div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:items-center justify-between mb-5">
+                    <div class="flex gap-2">
+                        <button type="button" data-tab="paket"
+                            class="px-5 py-2 rounded-full font-semibold transition"><i
+                                class="fa-solid fa-box-open mr-2"></i>Paket</button>
+                        <button type="button" data-tab="produk"
+                            class="px-5 py-2 rounded-full font-semibold transition"><i
+                                class="fa-solid fa-campground mr-2"></i>Produk</button>
+                    </div>
+                    <div class="relative sm:w-64">
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-green-800/60"></i>
+                        <input id="cari" type="search" placeholder="Cari paket atau barang..."
+                            class="field pl-9 border-green-900/20">
+                    </div>
+                </div>
+                <p id="hasilKosong" class="hidden card text-center text-green-800">Tidak ada yang cocok dengan
+                    pencarianmu.</p>
+                <div id="paket" class="scroll-mt-24">
+                    <section id="katalog-paket" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 items-stretch">
+                    </section>
+                </div>
+                <div id="produk" class="hidden scroll-mt-24">
+                    <section id="katalog" class="grid sm:grid-cols-2 gap-4 items-start"></section>
+                </div>
+            </div>
+
+            <!-- KANAN: panel pesanan -->
+            <aside id="panelPesan"
+                class="lg:sticky lg:top-20 scroll-mt-20 bg-green-900 text-white rounded-2xl p-5 flex flex-col gap-3">
+                <h2 class="font-brush-joney text-3xl -rotate-1">Pesanan Kamu</h2>
+                <ul id="daftarPesan" class="text-sm space-y-3 max-h-72 overflow-y-auto pr-1"></ul>
+                <div class="flex items-center justify-between text-sm border-t border-white/15 pt-3">
+                    <label for="hari">Lama sewa (hari)</label>
+                    <input id="hari" type="number" min="1" max="30" value="1" class="field text-center"
+                        style="width:5rem;padding:.35rem">
+                </div>
+                <p class="flex justify-between font-bold"><span>Estimasi total</span><span id="totalPesan">Rp 0</span>
+                </p>
+                <p id="err" class="hidden text-sm text-red-300"></p>
+                <button id="kirim" type="button" class="btn-primary justify-center bg-green-600 hover:bg-green-500"><i
+                        class="fa-brands fa-whatsapp"></i>Pesan via WhatsApp</button>
+                <button id="kosongkan" type="button" class="text-xs underline text-green-200 self-start">Kosongkan
+                    pesanan</button>
+            </aside>
+        </section>
+    </main>
+    <style type="text/tailwindcss">
+        @layer components {
+    .btn-primary { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-800 text-amber-50 hover:bg-green-900 transition; }
+    .btn-outline { @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-green-800 text-green-800 hover:bg-green-800 hover:text-white transition; }
+    .tag-label { @apply w-fit px-2 py-0.5 rounded-sm bg-green-800 text-amber-50 text-xl -rotate-6; }
+    .ph { @apply bg-gray-200 border border-gray-300 rounded-xl flex items-center justify-center text-gray-500 text-xs; }
+    .card { @apply bg-white/70 rounded-xl p-4 shadow-sm; }
+    .field { @apply w-full rounded-lg bg-white px-3 py-2.5 text-green-950 outline-none border border-transparent focus:border-green-600; }
+    .lbl { @apply block text-sm mb-1 text-green-100; }
+  }
+</style>
+    <script src="../../assets/js/data-produk.js"></script>
+    <script src="../../assets/js/keranjang.js"></script>
+    <script src="../../assets/js/pesan.js"></script>
+    <script src="../../assets/js/index.js"></script>
+</body>
+
+</html>
