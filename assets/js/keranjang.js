@@ -18,6 +18,13 @@
   const rp = n => "Rp " + Number(n).toLocaleString("id-ID");       // 35000 -> "Rp 35.000"
   const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
+  // Kartu foto paket: pakai gambar dari data-produk.js kalau ada,
+  // fallback ke kotak placeholder "Foto" kalau kosong atau gagal dimuat.
+  const fotoPaket = p => p.gambar
+    ? `<img src="${p.gambar}" alt="Paket ${p.nama}" class="h-32 w-full rounded-lg object-cover"
+         onerror="this.outerHTML='&lt;div class=&quot;ph h-32&quot;&gt;Foto&lt;/div&gt;'">`
+    : `<div class="ph h-32">Foto</div>`;
+
   /* ---------- 1. DATA KERANJANG ---------- */
   // state.items = { idBarang: { nama, harga, qty } }, state.hari = lama sewa
   let state = { items: {}, hari: 1 };
@@ -95,7 +102,7 @@
         <span class="tag-label font-brush-joney">PAKET</span>
         <h2 class="font-brush-joney text-4xl -rotate-2">${p.nama}</h2>
         ${p.tagline ? `<p class="font-brush-joney text-lg">${p.tagline}</p>` : ""}
-        <div class="ph h-32">Foto</div>
+        ${fotoPaket(p)}
         <ul class="text-sm space-y-1">${p.isi.map(i => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-700"></i>${i}</li>`).join("")}</ul>
         <p class="bg-green-800 text-amber-50 rounded-md px-3 py-1.5 w-fit">${"Rp"} <b class="text-xl">${p.harga.toLocaleString("id-ID")}</b>/hari</p>
         <div data-kontrol class="mt-auto">${kontrol(p.id)}</div>
