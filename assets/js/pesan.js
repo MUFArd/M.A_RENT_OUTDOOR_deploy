@@ -1,9 +1,10 @@
 /* =====================================================================
-   HALAMAN PESAN (pesan.html)  —  Paket + Produk dalam satu halaman
+   PANEL PESANAN  —  dipakai di pesan.html (QR), paket.html, dan produk.html
 
    Katalog (kartu paket, daftar produk, tombol + / −) digambar oleh
-   keranjang.js. File ini mengurus: tab Paket/Produk, kolom pencarian,
-   dan panel "Pesanan Kamu" (daftar barang, total, tombol kirim ke WhatsApp).
+   keranjang.js. File ini mengurus: tab Paket/Produk + kolom pencarian
+   (hanya ada di pesan.html, otomatis dilewati di halaman lain),
+   dan panel "Pesanan Kamu" (daftar barang, lama sewa, total, tombol kirim ke WhatsApp).
    ===================================================================== */
 (() => {
     "use strict";
@@ -46,7 +47,7 @@
         const wadah = tabAktif === "paket" ? "#katalog-paket > *" : "#katalog > *";
         $("hasilKosong").classList.toggle("hidden", [...document.querySelectorAll(wadah)].some(el => el.style.display !== "none"));
     }
-    $("cari").addEventListener("input", e => saring(e.target.value));
+    if ($("cari")) $("cari").addEventListener("input", e => saring(e.target.value));   // hanya bila ada kolom cari
 
     /* ---------- PANEL "PESANAN KAMU" ---------- */
     // Menggambar ulang daftar barang + total. Kolom nama/catatan tidak ikut digambar ulang
@@ -57,7 +58,7 @@
             ? items.map(i => `<li data-id="${i.id}" data-nama="${i.nama}" data-harga="${i.harga}" class="flex items-center justify-between gap-2">
           <div class="min-w-0"><p class="truncate">${i.nama}</p><p class="text-xs text-green-200">${K.rp(i.qty * i.harga)}</p></div>
           <div data-kontrol class="panel-ctl">${K.kontrol(i.id)}</div></li>`).join("")
-            : `<li class="text-green-100">Belum ada barang. Pilih paket atau produk di sebelah kiri.</li>`;
+            : `<li class="text-green-100">Belum ada barang. Tekan + Tambah pada paket atau produk.</li>`;
         $("totalPesan").textContent = K.rp(K.total());
         if (document.activeElement !== $("hari")) $("hari").value = K.hari();
     }
@@ -69,17 +70,19 @@
 
     /* ---------- KIRIM KE WHATSAPP ---------- */
     $("kirim").addEventListener("click", () => {
-        const nama = $("nama").value.trim(), catatan = $("catatan").value.trim();
-        const error = msg => { $("err").textContent = msg; $("err").classList.remove("hidden"); };
-        if (!K.daftar().length) return error("Pilih minimal satu paket atau produk dulu.");
-        if (!nama) return error("Nama wajib diisi.");
+        if (!K.daftar().length) {                                  // keranjang kosong -> tampilkan peringatan
+            $("err").textContent = "Pilih minimal satu paket atau produk dulu.";
+            return $("err").classList.remove("hidden");
+        }
         $("err").classList.add("hidden");
-        window.open(K.linkWA({ nama, catatan }), "_blank");       // isi chat dirakit oleh Keranjang.linkWA
+        K.bukaWA(K.linkWA({}), true);                              // isi chat (daftar barang + total) dirakit oleh linkWA; dibuka di tab yang sama
     });
 
     /* ---------- MEMBACA ALAMAT HALAMAN ---------- */
     // pesan.html#produk -> buka tab Produk | pesan.html#kat-tenda -> tab Produk lalu geser ke kategori Tenda
-    const hash = location.hash;
-    tampilTab(hash === "#produk" || hash.startsWith("#kat-") ? "produk" : "paket");
-    if (hash.startsWith("#kat-")) setTimeout(() => { const el = document.querySelector(hash); if (el) el.scrollIntoView({ behavior: "smooth" }); }, 300);
+    if ($("cari")) {                     // hanya di pesan.html yang punya tab
+        const hash = location.hash;
+        tampilTab(hash === "#produk" || hash.startsWith("#kat-") ? "produk" : "paket");
+        if (hash.startsWith("#kat-")) setTimeout(() => { const el = document.querySelector(hash); if (el) el.scrollIntoView({ behavior: "smooth" }); }, 300);
+    }
 })();

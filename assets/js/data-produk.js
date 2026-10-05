@@ -25,37 +25,37 @@
     window.PAKET = [
         {
             id: "paket-santai", nama: "Santai", harga: 50000,
-            gambar: "../../assets/img/paket/g1.jpeg",
+            gambar: "../../assets/img/paket/g4.jpeg",
             isi: ["Kursi Lipat 2 pcs", "Meja Lipat 1 pcs", "Tripod 1 pcs"]
         },
         {
             id: "paket-bbq", nama: "BBQ", harga: 50000,
-            gambar: "../../assets/img/paket/g2.jpeg",       
+            gambar: "../../assets/img/paket/g3.jpeg",       
             isi: ["Kompor Grill 1 pcs", "Grill Pan 1 pcs", "Gas 1 pcs", "Capitan 1 pcs"]
         },
         {
             id: "paket-tracking", nama: "Tracking", harga: 80000,
-            gambar: "../../assets/img/paket/g3.jpeg",
+            gambar: "../../assets/img/paket/g5.jpeg",
             isi: ["Carrier 60L 1 pcs", "Sepatu 1 pcs", "Tracking Pole 1 pcs", "Headlamp 1 pcs"]
         },
         {
             id: "paket-berdua", nama: "Berdua", harga: 120000,
-            gambar: "../../assets/img/paket/g4.jpeg",
+            gambar: "../../assets/img/paket/g9.jpeg",
             isi: ["Tenda Kap 2-3 1 pcs", "SB 2 pcs", "Matras 2 pcs", "Lampu Tenda 1 pcs", "Flysheet 1 pcs", "Kompor 1 pcs", "Cooking Set 1 pcs", "Gas 1 pcs"]
         },
         {
             id: "paket-ngopi", nama: "Ngopi", harga: 100000,
-            gambar: "../../assets/img/paket/g5.jpeg",
+            gambar: "../../assets/img/paket/g2.jpeg",
             isi: ["Kursi Lipat 4 pcs", "Meja Lipat 1 pcs", "Cooking Set 1 pcs", "Kompor"]
         },
         {
             id: "paket-ngadem", nama: "Ngadem", harga: 35000,
-            gambar: "../../assets/img/paket/g6.jpeg",
+            gambar: "../../assets/img/paket/g7.jpeg",
             isi: ["Flysheet 1 pcs", "Tiang Flysheet 1 pcs", "Tali Flysheet 1 pcs", "Pasak 8 pcs"]
         },
         {
             id: "paket-tektok", nama: "Tektok", harga: 65000,
-            gambar: "../../assets/img/paket/g7.jpeg",
+            gambar: "../../assets/img/paket/g8.jpeg",
             isi: ["Hydropack 1 pcs", "Tracking Pole 1 pcs", "Sepatu 1 pcs"]
         },
         {
@@ -65,11 +65,12 @@
         },
         {
             id: "paket-mantai", nama: "Mantai", harga: 40000,
-            gambar: "../../assets/img/paket/g9.jpeg",
+            gambar: "../../assets/img/paket/g1.jpeg",
             isi: ["Lensa Apexel", "Tripod Mixio"]
         },
         {
             id: "paket-piknik", nama: "Piknik", harga: 50000,
+            gambar: "../../assets/img/paket/g6.jpeg",
             isi: ["Keranjang", "Tikar Piknik", "Tripod", "Vas Bunga"]
         },
     ];
