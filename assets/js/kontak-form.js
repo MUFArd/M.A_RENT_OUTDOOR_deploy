@@ -56,7 +56,6 @@
   const awal = new URLSearchParams(location.search).get("pesan");
   if (awal) $("pesan").value = awal;
 
-  /* ---------- 2 & 3. CEK FORM LALU KIRIM KE WHATSAPP ---------- */
   $("waForm").addEventListener("submit", e => {
     e.preventDefault();                          // cegah halaman reload
     const nama = $("nama").value.trim(), pesan = $("pesan").value.trim(), catatan = $("catatan").value.trim();
@@ -66,7 +65,6 @@
     if (!K.daftar().length && !pesan) return error("Tulis pesan atau pilih barang terlebih dulu.");
     $("err").classList.add("hidden");
 
-    // Daftar barang dari keranjang ikut otomatis (pesanan = teks() adalah bawaan linkWA)
-    window.open(K.linkWA({ nama, pesan, catatan }), "_blank");
+    K.bukaWA(K.linkWA({ nama, pesan, catatan }));           
   });
 })();
