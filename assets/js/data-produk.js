@@ -60,7 +60,7 @@
         },
         {
             id: "paket-rame-rame", nama: "Rame-rame", harga: 165000,
-            gambar: "../../assets/img/paket/g8.jpeg",
+            gambar: "../../assets/img/paket/g.jpeg",
             isi: ["Tenda Kap 4-5 1 pcs", "SB 4 pcs", "Matras 4 pcs", "Lampu Tenda 1 pcs", "Flysheet 1 pcs", "Kompor 1 pcs", "Cooking Set 1 pcs", "Gas 1 pcs"]
         },
         {
