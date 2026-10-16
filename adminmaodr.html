@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Galeri | M.A Outdoor Rent</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="icon" href="/favicon.png" />
+  <link rel="stylesheet" href="../../assets/css/font.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body class="min-h-screen bg-amber-50 text-green-900">
+  <header class="bg-green-900 px-4 py-6 text-white md:px-12">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
+      <div>
+        <p class="text-sm text-green-200">M.A Outdoor Rent</p>
+        <h1 class="mt-1 text-2xl font-bold">Admin Galeri</h1>
+      </div>
+
+      <a
+        href="/src/page/galeri.html"
+        class="rounded-full border border-white/30 px-4 py-2 text-sm transition hover:bg-white/10"
+      >
+        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+        Lihat Galeri
+      </a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl space-y-10 px-4 py-8 md:px-8">
+    <!-- Form upload -->
+    <section class="rounded-2xl border border-green-900/10 bg-white/80 p-5 shadow-sm md:p-7">
+      <h2 class="text-xl font-bold">Upload Gambar</h2>
+      <p class="mt-1 text-sm text-gray-600">
+        Pilih satu atau beberapa gambar untuk ditambahkan ke galeri.
+      </p>
+
+      <form id="form-upload" class="mt-5 space-y-4">
+        <label
+          for="input-gambar"
+          class="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-green-800/30 bg-amber-50 px-4 py-8 text-center transition hover:border-green-700"
+        >
+          <i class="fa-solid fa-cloud-arrow-up text-3xl text-green-800"></i>
+          <span class="mt-3 font-semibold">Pilih gambar</span>
+          <span class="mt-1 text-sm text-gray-500">
+            JPG, PNG, atau format gambar lain yang didukung browser
+          </span>
+
+          <input
+            id="input-gambar"
+            type="file"
+            accept="image/*"
+            multiple
+            class="sr-only"
+          />
+        </label>
+
+        <p id="pilihan-file" class="text-sm text-gray-600">
+          Belum ada gambar dipilih.
+        </p>
+
+        <div
+          id="preview-grid"
+          class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4"
+        ></div>
+
+        <button
+          id="btn-upload"
+          type="submit"
+          class="w-full rounded-full bg-green-800 px-5 py-3 font-semibold text-white transition hover:bg-green-900 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        >
+          <i class="fa-solid fa-upload mr-2"></i>
+          Upload Gambar
+        </button>
+
+        <p
+          id="upload-status"
+          class="whitespace-pre-line text-sm"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </section>
+
+    <!-- Galeri admin -->
+    <section>
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 class="text-2xl font-bold">Galeri Tersimpan</h2>
+          <p class="mt-1 text-sm text-gray-600">
+            Gambar aktif dari Google Sheets.
+          </p>
+        </div>
+
+        <button
+          id="btn-refresh"
+          type="button"
+          class="rounded-full border border-green-800 px-4 py-2 text-sm font-semibold transition hover:bg-green-800 hover:text-white"
+        >
+          <i class="fa-solid fa-rotate-right mr-1"></i>
+          Refresh
+        </button>
+      </div>
+
+      <p
+        id="admin-galeri-status"
+        class="py-8 text-center text-sm text-green-800"
+        role="status"
+        aria-live="polite"
+      >
+        Memuat galeri...
+      </p>
+
+      <div
+        id="admin-galeri-grid"
+        class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4"
+      ></div>
+    </section>
+  </main>
+
+  <script src="../../assets/js/adminmaodr.js"></script>
+</body>
+</html>
